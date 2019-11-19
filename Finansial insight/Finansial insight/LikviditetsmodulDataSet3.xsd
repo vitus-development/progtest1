@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LikviditetsmodulDataSet3" targetNamespace="http://tempuri.org/LikviditetsmodulDataSet3.xsd" xmlns:mstns="http://tempuri.org/LikviditetsmodulDataSet3.xsd" xmlns="http://tempuri.org/LikviditetsmodulDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="LikviditetsmodulConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LikviditetsmodulConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Finansial_insight.My.MySettings.GlobalReference.Default.LikviditetsmodulConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="16_DranskTableAdapter" GeneratorDataComponentClassName="_16_DranskTableAdapter" Name="16_Dransk" UserDataComponentName="16_DranskTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (MySettings)" DbObjectName="Likviditetsmodul.dbo.[16_Dransk]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT D1 FROM dbo.[16_Dransk]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="D1" DataSetColumn="D1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (MySettings)" DbObjectName="Likviditetsmodul.dbo.[16_Dransk]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT D1
+FROM         [16_Dransk]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LikviditetsmodulDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LikviditetsmodulDataSet3" msprop:Generator_UserDSName="LikviditetsmodulDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="_x0031_6_Dransk" msprop:Generator_TableClassName="_16_DranskDataTable" msprop:Generator_TableVarName="table16_Dransk" msprop:Generator_RowChangedName="_16_DranskRowChanged" msprop:Generator_TablePropName="_16_Dransk" msprop:Generator_RowDeletingName="_16_DranskRowDeleting" msprop:Generator_RowChangingName="_16_DranskRowChanging" msprop:Generator_RowEvHandlerName="_16_DranskRowChangeEventHandler" msprop:Generator_RowDeletedName="_16_DranskRowDeleted" msprop:Generator_RowClassName="_16_DranskRow" msprop:Generator_UserTableName="16_Dransk" msprop:Generator_RowEvArgName="_16_DranskRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="D1" msprop:Generator_ColumnVarNameInTable="columnD1" msprop:Generator_ColumnPropNameInRow="D1" msprop:Generator_ColumnPropNameInTable="D1Column" msprop:Generator_UserColumnName="D1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7806F110-4A2C-4163-8C70-05753EEB2485}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Finansial_insight.My.MyApplication</StartupObject>
+    <RootNamespace>Finansial_insight</RootNamespace>
+    <AssemblyName>Finansial insight</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Finansial insight.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Finansial insight.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrugerGruppeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrugerGruppeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dranst.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dranst.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hovedmenu.designer.vb">
+      <DependentUpon>Hovedmenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hovedmenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indtastninger.Designer.vb">
+      <DependentUpon>Indtastninger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Indtastninger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indtastningsmenu .designer.vb">
+      <DependentUpon>Indtastningsmenu .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Indtastningsmenu .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorrectionsFactDataSet.Designer.vb">
+      <DependentUpon>KorrectionsFactDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="LikviditetsmodulDataSet.Designer.vb">
+      <DependentUpon>LikviditetsmodulDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="LikviditetsmodulDataSet1.Designer.vb">
+      <DependentUpon>LikviditetsmodulDataSet1.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="LikviditetsmodulDataSet2.Designer.vb">
+      <DependentUpon>LikviditetsmodulDataSet2.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="LikviditetsmodulDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LikviditetsmodulDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LikviditetsmodulDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LikviditetsmodulDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sted.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sted.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hovedmenu.resx">
+      <DependentUpon>Hovedmenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indtastninger.resx">
+      <DependentUpon>Indtastninger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indtastningsmenu .resx">
+      <DependentUpon>Indtastningsmenu .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BrugerGruppeDataSet.xsc">
+      <DependentUpon>BrugerGruppeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BrugerGruppeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrugerGruppeDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrugerGruppeDataSet.xss">
+      <DependentUpon>BrugerGruppeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dranst.xsc">
+      <DependentUpon>Dranst.xsd</DependentUpon>
+    </None>
+    <None Include="Dranst.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dranst.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dranst.xss">
+      <DependentUpon>Dranst.xsd</DependentUpon>
+    </None>
+    <None Include="KorrectionsFactDataSet.xsc">
+      <DependentUpon>KorrectionsFactDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KorrectionsFactDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KorrectionsFactDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="KorrectionsFactDataSet.xss">
+      <DependentUpon>KorrectionsFactDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet.xsc">
+      <DependentUpon>LikviditetsmodulDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LikviditetsmodulDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="LikviditetsmodulDataSet.xss">
+      <DependentUpon>LikviditetsmodulDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet1.xsc">
+      <DependentUpon>LikviditetsmodulDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LikviditetsmodulDataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="LikviditetsmodulDataSet1.xss">
+      <DependentUpon>LikviditetsmodulDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet2.xsc">
+      <DependentUpon>LikviditetsmodulDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LikviditetsmodulDataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="LikviditetsmodulDataSet2.xss">
+      <DependentUpon>LikviditetsmodulDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet3.xsc">
+      <DependentUpon>LikviditetsmodulDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LikviditetsmodulDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LikviditetsmodulDataSet3.xss">
+      <DependentUpon>LikviditetsmodulDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet4.xsc">
+      <DependentUpon>LikviditetsmodulDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LikviditetsmodulDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LikviditetsmodulDataSet4.xss">
+      <DependentUpon>LikviditetsmodulDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Sted.xsc">
+      <DependentUpon>Sted.xsd</DependentUpon>
+    </None>
+    <None Include="Sted.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sted.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sted.xss">
+      <DependentUpon>Sted.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

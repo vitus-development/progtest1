@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1_sted_saldo" targetNamespace="http://tempuri.org/DataSet1_sted_saldo.xsd" xmlns:mstns="http://tempuri.org/DataSet1_sted_saldo.xsd" xmlns="http://tempuri.org/DataSet1_sted_saldo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Finansial_Insight___Menu.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vStedSaldo_PrimoTableAdapter" GeneratorDataComponentClassName="vStedSaldo_PrimoTableAdapter" Name="vStedSaldo_Primo" UserDataComponentName="vStedSaldo_PrimoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vStedSaldo_Primo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Version, Bruger, Dim01Value, F_løbenr, L_løbenr, [Antal poster], Sum_Beløb, Sum_BruttoBeløb, Sum_K_beløb, Sum_k_brutto FROM dbo.vStedSaldo_Primo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Version" DataSetColumn="Version" />
+              <Mapping SourceColumn="Bruger" DataSetColumn="Bruger" />
+              <Mapping SourceColumn="Dim01Value" DataSetColumn="Dim01Value" />
+              <Mapping SourceColumn="F_løbenr" DataSetColumn="F_løbenr" />
+              <Mapping SourceColumn="L_løbenr" DataSetColumn="L_løbenr" />
+              <Mapping SourceColumn="Antal poster" DataSetColumn="Antal poster" />
+              <Mapping SourceColumn="Sum_Beløb" DataSetColumn="Sum_Beløb" />
+              <Mapping SourceColumn="Sum_BruttoBeløb" DataSetColumn="Sum_BruttoBeløb" />
+              <Mapping SourceColumn="Sum_K_beløb" DataSetColumn="Sum_K_beløb" />
+              <Mapping SourceColumn="Sum_k_brutto" DataSetColumn="Sum_k_brutto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1_sted_saldo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1_sted_saldo" msprop:Generator_UserDSName="DataSet1_sted_saldo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vStedSaldo_Primo" msprop:Generator_TableClassName="vStedSaldo_PrimoDataTable" msprop:Generator_TableVarName="tablevStedSaldo_Primo" msprop:Generator_RowChangedName="vStedSaldo_PrimoRowChanged" msprop:Generator_TablePropName="vStedSaldo_Primo" msprop:Generator_RowDeletingName="vStedSaldo_PrimoRowDeleting" msprop:Generator_RowChangingName="vStedSaldo_PrimoRowChanging" msprop:Generator_RowEvHandlerName="vStedSaldo_PrimoRowChangeEventHandler" msprop:Generator_RowDeletedName="vStedSaldo_PrimoRowDeleted" msprop:Generator_RowClassName="vStedSaldo_PrimoRow" msprop:Generator_UserTableName="vStedSaldo_Primo" msprop:Generator_RowEvArgName="vStedSaldo_PrimoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Version" msprop:Generator_ColumnVarNameInTable="columnVersion" msprop:Generator_ColumnPropNameInRow="Version" msprop:Generator_ColumnPropNameInTable="VersionColumn" msprop:Generator_UserColumnName="Version" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bruger" msprop:Generator_ColumnVarNameInTable="columnBruger" msprop:Generator_ColumnPropNameInRow="Bruger" msprop:Generator_ColumnPropNameInTable="BrugerColumn" msprop:Generator_UserColumnName="Bruger" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dim01Value" msprop:Generator_ColumnVarNameInTable="columnDim01Value" msprop:Generator_ColumnPropNameInRow="Dim01Value" msprop:Generator_ColumnPropNameInTable="Dim01ValueColumn" msprop:Generator_UserColumnName="Dim01Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F_løbenr" msprop:Generator_ColumnVarNameInTable="columnF_løbenr" msprop:Generator_ColumnPropNameInRow="F_løbenr" msprop:Generator_ColumnPropNameInTable="F_løbenrColumn" msprop:Generator_UserColumnName="F_løbenr" type="xs:int" minOccurs="0" />
+              <xs:element name="L_løbenr" msprop:Generator_ColumnVarNameInTable="columnL_løbenr" msprop:Generator_ColumnPropNameInRow="L_løbenr" msprop:Generator_ColumnPropNameInTable="L_løbenrColumn" msprop:Generator_UserColumnName="L_løbenr" type="xs:int" minOccurs="0" />
+              <xs:element name="Antal_x0020_poster" msprop:Generator_ColumnVarNameInTable="columnAntal_poster" msprop:Generator_ColumnPropNameInRow="Antal_poster" msprop:Generator_ColumnPropNameInTable="Antal_posterColumn" msprop:Generator_UserColumnName="Antal poster" type="xs:int" minOccurs="0" />
+              <xs:element name="Sum_Beløb" msprop:Generator_ColumnVarNameInTable="columnSum_Beløb" msprop:Generator_ColumnPropNameInRow="Sum_Beløb" msprop:Generator_ColumnPropNameInTable="Sum_BeløbColumn" msprop:Generator_UserColumnName="Sum_Beløb" type="xs:int" minOccurs="0" />
+              <xs:element name="Sum_BruttoBeløb" msprop:Generator_ColumnVarNameInTable="columnSum_BruttoBeløb" msprop:Generator_ColumnPropNameInRow="Sum_BruttoBeløb" msprop:Generator_ColumnPropNameInTable="Sum_BruttoBeløbColumn" msprop:Generator_UserColumnName="Sum_BruttoBeløb" type="xs:int" minOccurs="0" />
+              <xs:element name="Sum_K_beløb" msprop:Generator_ColumnVarNameInTable="columnSum_K_beløb" msprop:Generator_ColumnPropNameInRow="Sum_K_beløb" msprop:Generator_ColumnPropNameInTable="Sum_K_beløbColumn" msprop:Generator_UserColumnName="Sum_K_beløb" type="xs:int" minOccurs="0" />
+              <xs:element name="Sum_k_brutto" msprop:Generator_ColumnVarNameInTable="columnSum_k_brutto" msprop:Generator_ColumnPropNameInRow="Sum_k_brutto" msprop:Generator_ColumnPropNameInTable="Sum_k_bruttoColumn" msprop:Generator_UserColumnName="Sum_k_brutto" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

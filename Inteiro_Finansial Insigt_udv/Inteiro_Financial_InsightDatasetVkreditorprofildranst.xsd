@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inteiro_Financial_InsightDatasetVkreditorprofildranst" targetNamespace="http://tempuri.org/Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd" xmlns:mstns="http://tempuri.org/Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd" xmlns="http://tempuri.org/Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inteiro_Finansial_Insigt_udv.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vKreditorprofilDranstTableAdapter" GeneratorDataComponentClassName="vKreditorprofilDranstTableAdapter" Name="vKreditorprofilDranst" UserDataComponentName="vKreditorprofilDranstTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vKreditorprofilDranst" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dim04Value, Pr_beløb FROM dbo.vKreditorprofilDranst</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Dim04Value" DataSetColumn="Dim04Value" />
+              <Mapping SourceColumn="Pr_beløb" DataSetColumn="Pr_beløb" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vKreditorprofilDranst" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT   Dim04Value, Pr_beløb
+FROM         vKreditorprofilDranst
+ORDER BY Dim04Value</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inteiro_Financial_InsightDatasetVkreditorprofildranst" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Inteiro_Financial_InsightDatasetVkreditorprofildranst" msprop:Generator_UserDSName="Inteiro_Financial_InsightDatasetVkreditorprofildranst">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vKreditorprofilDranst" msprop:Generator_TableClassName="vKreditorprofilDranstDataTable" msprop:Generator_TableVarName="tablevKreditorprofilDranst" msprop:Generator_RowChangedName="vKreditorprofilDranstRowChanged" msprop:Generator_TablePropName="vKreditorprofilDranst" msprop:Generator_RowDeletingName="vKreditorprofilDranstRowDeleting" msprop:Generator_RowChangingName="vKreditorprofilDranstRowChanging" msprop:Generator_RowEvHandlerName="vKreditorprofilDranstRowChangeEventHandler" msprop:Generator_RowDeletedName="vKreditorprofilDranstRowDeleted" msprop:Generator_RowClassName="vKreditorprofilDranstRow" msprop:Generator_UserTableName="vKreditorprofilDranst" msprop:Generator_RowEvArgName="vKreditorprofilDranstRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dim04Value" msprop:Generator_ColumnVarNameInTable="columnDim04Value" msprop:Generator_ColumnPropNameInRow="Dim04Value" msprop:Generator_ColumnPropNameInTable="Dim04ValueColumn" msprop:Generator_UserColumnName="Dim04Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pr_beløb" msprop:Generator_ColumnVarNameInTable="columnPr_beløb" msprop:Generator_ColumnPropNameInRow="Pr_beløb" msprop:Generator_ColumnPropNameInTable="Pr_beløbColumn" msprop:Generator_UserColumnName="Pr_beløb" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

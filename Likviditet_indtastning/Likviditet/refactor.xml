@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="75844179-fbd2-4544-81b6-2f7aa04675c8" ChangeDateTime="06/30/2019 10:54:08" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Kommentar].[Bilag]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Kommentar]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Bilag_niv_1" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7553b25e-5276-4612-b2f0-e3998a1eabe8" ChangeDateTime="06/30/2019 10:54:57" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Kommentar].[f3]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Kommentar]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="F3" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a8bb903-7ae8-4164-ab64-d31ce8f01941" ChangeDateTime="06/30/2019 11:54:00" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Table1].[Dim02Value]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fk_Dim02Value" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3db4f3ce-fd8d-486a-b58c-24e3ffebfed4" ChangeDateTime="06/30/2019 11:54:14" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Table1].[fk_Dim02Value]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fk_Dim01Value" />
+  </Operation>
+</Operations>

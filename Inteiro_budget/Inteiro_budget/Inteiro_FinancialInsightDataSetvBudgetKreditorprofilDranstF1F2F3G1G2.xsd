@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2" targetNamespace="http://tempuri.org/Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd" xmlns:mstns="http://tempuri.org/Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd" xmlns="http://tempuri.org/Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inteiro_budget.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vBudget_KreditorprofilDranstF1F2F3G1G2TableAdapter" GeneratorDataComponentClassName="vBudget_KreditorprofilDranstF1F2F3G1G2TableAdapter" Name="vBudget_KreditorprofilDranstF1F2F3G1G2" UserDataComponentName="vBudget_KreditorprofilDranstF1F2F3G1G2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vBudget_KreditorprofilDranstF1F2F3G1G2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dim04Value, Bruger, Likviditetsbruger, F1, F2, F3, G1, G2, Status, S_Forbrug_tidl_år, S_budgetbeløb, S_korrektion FROM dbo.vBudget_KreditorprofilDranstF1F2F3G1G2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Dim04Value" DataSetColumn="Dim04Value" />
+              <Mapping SourceColumn="Bruger" DataSetColumn="Bruger" />
+              <Mapping SourceColumn="Likviditetsbruger" DataSetColumn="Likviditetsbruger" />
+              <Mapping SourceColumn="F1" DataSetColumn="F1" />
+              <Mapping SourceColumn="F2" DataSetColumn="F2" />
+              <Mapping SourceColumn="F3" DataSetColumn="F3" />
+              <Mapping SourceColumn="G1" DataSetColumn="G1" />
+              <Mapping SourceColumn="G2" DataSetColumn="G2" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="S_Forbrug_tidl_år" DataSetColumn="S_Forbrug_tidl_år" />
+              <Mapping SourceColumn="S_budgetbeløb" DataSetColumn="S_budgetbeløb" />
+              <Mapping SourceColumn="S_korrektion" DataSetColumn="S_korrektion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2" msprop:Generator_UserDSName="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vBudget_KreditorprofilDranstF1F2F3G1G2" msprop:Generator_TableClassName="vBudget_KreditorprofilDranstF1F2F3G1G2DataTable" msprop:Generator_TableVarName="tablevBudget_KreditorprofilDranstF1F2F3G1G2" msprop:Generator_TablePropName="vBudget_KreditorprofilDranstF1F2F3G1G2" msprop:Generator_RowDeletingName="vBudget_KreditorprofilDranstF1F2F3G1G2RowDeleting" msprop:Generator_RowChangingName="vBudget_KreditorprofilDranstF1F2F3G1G2RowChanging" msprop:Generator_RowEvHandlerName="vBudget_KreditorprofilDranstF1F2F3G1G2RowChangeEventHandler" msprop:Generator_RowDeletedName="vBudget_KreditorprofilDranstF1F2F3G1G2RowDeleted" msprop:Generator_UserTableName="vBudget_KreditorprofilDranstF1F2F3G1G2" msprop:Generator_RowChangedName="vBudget_KreditorprofilDranstF1F2F3G1G2RowChanged" msprop:Generator_RowEvArgName="vBudget_KreditorprofilDranstF1F2F3G1G2RowChangeEvent" msprop:Generator_RowClassName="vBudget_KreditorprofilDranstF1F2F3G1G2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dim04Value" msprop:Generator_ColumnVarNameInTable="columnDim04Value" msprop:Generator_ColumnPropNameInRow="Dim04Value" msprop:Generator_ColumnPropNameInTable="Dim04ValueColumn" msprop:Generator_UserColumnName="Dim04Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bruger" msprop:Generator_ColumnVarNameInTable="columnBruger" msprop:Generator_ColumnPropNameInRow="Bruger" msprop:Generator_ColumnPropNameInTable="BrugerColumn" msprop:Generator_UserColumnName="Bruger" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Likviditetsbruger" msprop:Generator_ColumnVarNameInTable="columnLikviditetsbruger" msprop:Generator_ColumnPropNameInRow="Likviditetsbruger" msprop:Generator_ColumnPropNameInTable="LikviditetsbrugerColumn" msprop:Generator_UserColumnName="Likviditetsbruger" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F1" msprop:Generator_ColumnVarNameInTable="columnF1" msprop:Generator_ColumnPropNameInRow="F1" msprop:Generator_ColumnPropNameInTable="F1Column" msprop:Generator_UserColumnName="F1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F2" msprop:Generator_ColumnVarNameInTable="columnF2" msprop:Generator_ColumnPropNameInRow="F2" msprop:Generator_ColumnPropNameInTable="F2Column" msprop:Generator_UserColumnName="F2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F3" msprop:Generator_ColumnVarNameInTable="columnF3" msprop:Generator_ColumnPropNameInRow="F3" msprop:Generator_ColumnPropNameInTable="F3Column" msprop:Generator_UserColumnName="F3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="G1" msprop:Generator_ColumnVarNameInTable="columnG1" msprop:Generator_ColumnPropNameInRow="G1" msprop:Generator_ColumnPropNameInTable="G1Column" msprop:Generator_UserColumnName="G1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="G2" msprop:Generator_ColumnVarNameInTable="columnG2" msprop:Generator_ColumnPropNameInRow="G2" msprop:Generator_ColumnPropNameInTable="G2Column" msprop:Generator_UserColumnName="G2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="S_Forbrug_tidl_år" msprop:Generator_ColumnVarNameInTable="columnS_Forbrug_tidl_år" msprop:Generator_ColumnPropNameInRow="S_Forbrug_tidl_år" msprop:Generator_ColumnPropNameInTable="S_Forbrug_tidl_årColumn" msprop:Generator_UserColumnName="S_Forbrug_tidl_år" type="xs:double" minOccurs="0" />
+              <xs:element name="S_budgetbeløb" msprop:Generator_ColumnVarNameInTable="columnS_budgetbeløb" msprop:Generator_ColumnPropNameInRow="S_budgetbeløb" msprop:Generator_ColumnPropNameInTable="S_budgetbeløbColumn" msprop:Generator_UserColumnName="S_budgetbeløb" type="xs:double" minOccurs="0" />
+              <xs:element name="S_korrektion" msprop:Generator_ColumnVarNameInTable="columnS_korrektion" msprop:Generator_ColumnPropNameInRow="S_korrektion" msprop:Generator_ColumnPropNameInTable="S_korrektionColumn" msprop:Generator_UserColumnName="S_korrektion" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

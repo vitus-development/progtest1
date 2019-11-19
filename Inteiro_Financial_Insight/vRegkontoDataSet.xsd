@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vRegkontoDataSet" targetNamespace="http://tempuri.org/vRegkontoDataSet.xsd" xmlns:mstns="http://tempuri.org/vRegkontoDataSet.xsd" xmlns="http://tempuri.org/vRegkontoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inteiro_Fnancial_Insight.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vRegkontoTableAdapter" GeneratorDataComponentClassName="vRegkontoTableAdapter" Name="vRegkonto" UserDataComponentName="vRegkontoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vRegkonto" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Reg kontonr]
+FROM            vRegkonto
+ORDER BY [Reg kontonr]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Reg kontonr" DataSetColumn="Reg kontonr" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vRegkontoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vRegkontoDataSet" msprop:Generator_UserDSName="vRegkontoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vRegkonto" msprop:Generator_TableClassName="vRegkontoDataTable" msprop:Generator_TableVarName="tablevRegkonto" msprop:Generator_RowChangedName="vRegkontoRowChanged" msprop:Generator_TablePropName="vRegkonto" msprop:Generator_RowDeletingName="vRegkontoRowDeleting" msprop:Generator_RowChangingName="vRegkontoRowChanging" msprop:Generator_RowEvHandlerName="vRegkontoRowChangeEventHandler" msprop:Generator_RowDeletedName="vRegkontoRowDeleted" msprop:Generator_RowClassName="vRegkontoRow" msprop:Generator_UserTableName="vRegkonto" msprop:Generator_RowEvArgName="vRegkontoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Reg_x0020_kontonr" msprop:Generator_ColumnVarNameInTable="columnReg_kontonr" msprop:Generator_ColumnPropNameInRow="Reg_kontonr" msprop:Generator_ColumnPropNameInTable="Reg_kontonrColumn" msprop:Generator_UserColumnName="Reg kontonr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

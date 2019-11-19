@@ -1,0 +1,1264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DF74D07-1A64-4F71-8442-2BE4355C0C80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Inteiro_budget.My.MyApplication</StartupObject>
+    <RootNamespace>Inteiro_budget</RootNamespace>
+    <AssemblyName>Inteiro_budget</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Inteiro_budget.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Inteiro_budget.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CRVsPackageLib, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CRVsPackageLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.CrystalReports.TemplateEngine.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.Enterprise.Viewing.ReportSource.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.VSDesigner.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelApi, Version=1.7.4.6, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetOfficeFw.Excel.1.7.4.6\lib\net40\ExcelApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FastReport, Version=2019.4.0.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastReport.OpenSource.2019.4.0\lib\net40\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Data.MsSql, Version=2019.4.0.0, Culture=neutral, PublicKeyToken=b33a9a06fcc00c4c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastReport.OpenSource.Data.MsSql.2019.4.0\lib\net452\FastReport.Data.MsSql.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="GCDesign, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GCDesign.1.0.0\lib\net46\GCDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LibExcel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\LibExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micron, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Micron.1.8.0\lib\Micron.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Graph.Core, Version=1.18.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Graph.Core.1.18.0\lib\net45\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.PowerBI.Api, Version=2.11.0.19267, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.PowerBI.Api.2.11.0\lib\netstandard2.0\Microsoft.PowerBI.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.2.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReportsPackage.1.0.0\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.20\lib\net461\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Vbe.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop.Forms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Vbe.Interop.Forms.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Micron.1.8.0\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=acf636d62c39f8f5, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetOffice.Core.Net45.1.7.4.4\lib\net45\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\OFFICE.DLL</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=7c1c3e9d16cace88, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetOffice.Core.Net45.1.7.4.4\lib\net45\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\SAPBusinessObjects.WPF.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\SAPBusinessObjects.WPF.ViewerShared.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Data, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Stimulsoft.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Map, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Stimulsoft.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Mvc, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2019.4.1\lib\net45\Stimulsoft.Report.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2019.4.1\lib\net45\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign, Version=2019.4.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2019.4.1\lib\net45\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=2.4.3.29446, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Engine.2019.4.1\lib\net45\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.7.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a3637beacf571e8a, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetOffice.Core.Net45.1.7.4.4\lib\net45\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datokonfiguering.Designer.vb">
+      <DependentUpon>Datokonfiguering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datokonfiguering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetVFinansår_Profil.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetVFinansår_Profil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Kommuner.designer.vb">
+      <DependentUpon>Kommuner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kommuner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet12delsgrupper.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet12delsgrupper.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetBudgetKreditorprofil.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetBudgetKreditorprofil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetDatoPeriode.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriode.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetDatoPeriode2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriode2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetDatoPeriodeÅR.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriodeÅR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetFordelingtype.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetFordelingtype.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetSetupBetalingsdato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupBetalingsdato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetSetupDato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupDato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetSetupPostdato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupPostdato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetStaus.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetStaus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvBruger.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvBruger.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDatasetVkreditorprofildranst.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetVSetupdato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetVSetupdato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetVSetupdato2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetVSetupdato2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvVersion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvVersion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurering_ Kreditorer.designer.vb">
+      <DependentUpon>Konfigurering_ Kreditorer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurering_ Kreditorer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kreditorbudget.Designer.vb">
+      <DependentUpon>Kreditorbudget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kreditorbudget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kreditorrapport.Designer.vb" />
+    <Compile Include="Kreditorrapport_gridview .Designer.vb">
+      <DependentUpon>Kreditorrapport_gridview .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kreditorrapport_gridview .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Projekter.Designer.vb">
+      <DependentUpon>Projekter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Projekter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Datokonfiguering.resx">
+      <DependentUpon>Datokonfiguering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kommuner.resx">
+      <DependentUpon>Kommuner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konfigurering_ Kreditorer.resx">
+      <DependentUpon>Konfigurering_ Kreditorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kreditorbudget.resx">
+      <DependentUpon>Kreditorbudget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kreditorrapport_gridview .resx">
+      <DependentUpon>Kreditorrapport_gridview .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projekter.resx">
+      <DependentUpon>Projekter.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\core.js" />
+    <Content Include="Scripts\core.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\i18n\af.js" />
+    <Content Include="Scripts\i18n\ar.js" />
+    <Content Include="Scripts\i18n\az.js" />
+    <Content Include="Scripts\i18n\bg.js" />
+    <Content Include="Scripts\i18n\bn.js" />
+    <Content Include="Scripts\i18n\bs.js" />
+    <Content Include="Scripts\i18n\ca.js" />
+    <Content Include="Scripts\i18n\cs.js" />
+    <Content Include="Scripts\i18n\da.js" />
+    <Content Include="Scripts\i18n\de.js" />
+    <Content Include="Scripts\i18n\dsb.js" />
+    <Content Include="Scripts\i18n\el.js" />
+    <Content Include="Scripts\i18n\en.js" />
+    <Content Include="Scripts\i18n\es.js" />
+    <Content Include="Scripts\i18n\et.js" />
+    <Content Include="Scripts\i18n\eu.js" />
+    <Content Include="Scripts\i18n\fa.js" />
+    <Content Include="Scripts\i18n\fi.js" />
+    <Content Include="Scripts\i18n\fr.js" />
+    <Content Include="Scripts\i18n\gl.js" />
+    <Content Include="Scripts\i18n\he.js" />
+    <Content Include="Scripts\i18n\hi.js" />
+    <Content Include="Scripts\i18n\hr.js" />
+    <Content Include="Scripts\i18n\hsb.js" />
+    <Content Include="Scripts\i18n\hu.js" />
+    <Content Include="Scripts\i18n\hy.js" />
+    <Content Include="Scripts\i18n\id.js" />
+    <Content Include="Scripts\i18n\is.js" />
+    <Content Include="Scripts\i18n\it.js" />
+    <Content Include="Scripts\i18n\ja.js" />
+    <Content Include="Scripts\i18n\ka.js" />
+    <Content Include="Scripts\i18n\km.js" />
+    <Content Include="Scripts\i18n\ko.js" />
+    <Content Include="Scripts\i18n\lt.js" />
+    <Content Include="Scripts\i18n\lv.js" />
+    <Content Include="Scripts\i18n\mk.js" />
+    <Content Include="Scripts\i18n\ms.js" />
+    <Content Include="Scripts\i18n\nb.js" />
+    <Content Include="Scripts\i18n\ne.js" />
+    <Content Include="Scripts\i18n\nl.js" />
+    <Content Include="Scripts\i18n\pl.js" />
+    <Content Include="Scripts\i18n\ps.js" />
+    <Content Include="Scripts\i18n\pt-BR.js" />
+    <Content Include="Scripts\i18n\pt.js" />
+    <Content Include="Scripts\i18n\ro.js" />
+    <Content Include="Scripts\i18n\ru.js" />
+    <Content Include="Scripts\i18n\sk.js" />
+    <Content Include="Scripts\i18n\sl.js" />
+    <Content Include="Scripts\i18n\sq.js" />
+    <Content Include="Scripts\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\i18n\sr.js" />
+    <Content Include="Scripts\i18n\sv.js" />
+    <Content Include="Scripts\i18n\th.js" />
+    <Content Include="Scripts\i18n\tk.js" />
+    <Content Include="Scripts\i18n\tr.js" />
+    <Content Include="Scripts\i18n\uk.js" />
+    <Content Include="Scripts\i18n\vi.js" />
+    <Content Include="Scripts\i18n\zh-CN.js" />
+    <Content Include="Scripts\i18n\zh-TW.js" />
+    <Content Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\knockout-3.5.1.debug.js" />
+    <Content Include="Scripts\knockout-3.5.1.js" />
+    <Content Include="Scripts\knockout-sortable.js" />
+    <Content Include="Scripts\knockout-sortable.min.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\lodash.js" />
+    <Content Include="Scripts\lodash.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Content\bootstrap-grid.css.map" />
+    <None Include="Content\bootstrap-grid.min.css.map" />
+    <None Include="Content\bootstrap-reboot.css.map" />
+    <None Include="Content\bootstrap-reboot.min.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\bootstrap.min.css.map" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsc">
+      <DependentUpon>Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xss">
+      <DependentUpon>Inteiro_FinancialInsightDataSetvBudgetKreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet1.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet1.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet12delsgrupper.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet12delsgrupper.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet12delsgrupper.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet12delsgrupper.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet12delsgrupper.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet12delsgrupper.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBudgetKreditorprofil.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetBudgetKreditorprofil.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBudgetKreditorprofil.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetBudgetKreditorprofil.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBudgetKreditorprofil.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetBudgetKreditorprofil.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriode.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriode.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriode.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetDatoPeriode.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriode.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriode.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriode2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriode2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriode2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetDatoPeriode2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriode2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriode2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriodeÅR.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriodeÅR.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriodeÅR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetDatoPeriodeÅR.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDatoPeriodeÅR.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDatoPeriodeÅR.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.xss">
+      <DependentUpon>Inteiro_Financial_InsightDatasetDatoPeriodeÅrInterval.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetFordelingtype.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetFordelingtype.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetFordelingtype.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetFordelingtype.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetFordelingtype.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetFordelingtype.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetKonfiguration_antal_kreditorer.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetPeriode_År_interval_dag.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupBetalingsdato.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupBetalingsdato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupBetalingsdato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetSetupBetalingsdato.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupBetalingsdato.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupBetalingsdato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupDato.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupDato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupDato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetSetupDato.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupDato.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupDato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupPostdato.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupPostdato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupPostdato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetSetupPostdato.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetSetupPostdato.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetSetupPostdato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetStaus.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetStaus.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetStaus.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetStaus.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetStaus.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetStaus.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvbetalingsprofilerKreditorer.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvBruger.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvBruger.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvBruger.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvBruger.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvBruger.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvBruger.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvBudget_KreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVFinansår_Profil.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVFinansår_Profil.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVFinansår_Profil.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetVFinansår_Profil.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVFinansår_Profil.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVFinansår_Profil.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorpofildranstF1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDatasetVkreditorprofildranst.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDatasetVkreditorprofildranst.xss">
+      <DependentUpon>Inteiro_Financial_InsightDatasetVkreditorprofildranst.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVKreditorProfilDranstF1F2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvKreditorprofilDranstF1F2F3G1G2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVSetupdato.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVSetupdato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVSetupdato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetVSetupdato.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVSetupdato.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVSetupdato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVSetupdato2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVSetupdato2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVSetupdato2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetVSetupdato2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVSetupdato2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVSetupdato2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvSetup_Betalings_dato.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvVersion.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvVersion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvVersion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvVersion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvVersion.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvVersion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_CSV_Likviditetsbudget_niv_1_2_import.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_likviditetsniv_1_2_import.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_Likviditet_niv_1_2_import.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Scripts\bootstrap.bundle.min.js.map" />
+    <None Include="Scripts\bootstrap.js.map" />
+    <None Include="Scripts\bootstrap.min.js.map" />
+    <None Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="Scripts\esm\popper-utils.min.js.map" />
+    <None Include="Scripts\esm\popper.js.map" />
+    <None Include="Scripts\esm\popper.min.js.map" />
+    <None Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="Scripts\popper-utils.js.map" />
+    <None Include="Scripts\popper-utils.min.js.map" />
+    <None Include="Scripts\popper.js.map" />
+    <None Include="Scripts\popper.min.js.map" />
+    <None Include="Scripts\README.md" />
+    <None Include="Scripts\umd\popper-utils.js.map" />
+    <None Include="Scripts\umd\popper-utils.min.js.map" />
+    <None Include="Scripts\umd\popper.js.map" />
+    <None Include="Scripts\umd\popper.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Localization\ar.xml" />
+    <Content Include="Localization\be.xml" />
+    <Content Include="Localization\bg.xml" />
+    <Content Include="Localization\bh.xml" />
+    <Content Include="Localization\ca-ES.xml" />
+    <Content Include="Localization\cs.xml" />
+    <Content Include="Localization\de.xml" />
+    <Content Include="Localization\el-GR.xml" />
+    <Content Include="Localization\en-GB.xml" />
+    <Content Include="Localization\en.xml" />
+    <Content Include="Localization\es.xml" />
+    <Content Include="Localization\eu-ES.xml" />
+    <Content Include="Localization\fa.xml" />
+    <Content Include="Localization\fr.xml" />
+    <Content Include="Localization\gl-ES.xml" />
+    <Content Include="Localization\hr.xml" />
+    <Content Include="Localization\hu.xml" />
+    <Content Include="Localization\id.xml" />
+    <Content Include="Localization\it.xml" />
+    <Content Include="Localization\ja.xml" />
+    <Content Include="Localization\ka.xml" />
+    <Content Include="Localization\ko.xml" />
+    <Content Include="Localization\lt.xml" />
+    <Content Include="Localization\nb-NO.xml" />
+    <Content Include="Localization\nl.xml" />
+    <Content Include="Localization\pl.xml" />
+    <Content Include="Localization\pt-BR.xml" />
+    <Content Include="Localization\pt.xml" />
+    <Content Include="Localization\ro.xml" />
+    <Content Include="Localization\ru.xml" />
+    <Content Include="Localization\sk.xml" />
+    <Content Include="Localization\sr.xml" />
+    <Content Include="Localization\sv.xml" />
+    <Content Include="Localization\tr.xml" />
+    <Content Include="Localization\uk.xml" />
+    <Content Include="Localization\vi.xml" />
+    <Content Include="Localization\zh-CHS.xml" />
+    <Content Include="Localization\zh-CHT.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

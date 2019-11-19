@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Walk", "Walk\Walk.vbproj", "{D2544D1E-F43A-4184-9DCD-909163DEAF81}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WalkDatabase", "WalkDatabase\WalkDatabase.sqlproj", "{5B6652FB-FB80-4DD8-8990-31A40D583BBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2544D1E-F43A-4184-9DCD-909163DEAF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2544D1E-F43A-4184-9DCD-909163DEAF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2544D1E-F43A-4184-9DCD-909163DEAF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2544D1E-F43A-4184-9DCD-909163DEAF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6652FB-FB80-4DD8-8990-31A40D583BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6652FB-FB80-4DD8-8990-31A40D583BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6652FB-FB80-4DD8-8990-31A40D583BBF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5B6652FB-FB80-4DD8-8990-31A40D583BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6652FB-FB80-4DD8-8990-31A40D583BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6652FB-FB80-4DD8-8990-31A40D583BBF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D1B046F-2D80-4CFA-AAF8-8BDBF6C7CFAE}
+	EndGlobalSection
+EndGlobal

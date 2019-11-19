@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LikviditetsmodulDataSet1" targetNamespace="http://tempuri.org/LikviditetsmodulDataSet1.xsd" xmlns:mstns="http://tempuri.org/LikviditetsmodulDataSet1.xsd" xmlns="http://tempuri.org/LikviditetsmodulDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="LikviditetsmodulConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LikviditetsmodulConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Finansial_insight.My.MySettings.GlobalReference.Default.LikviditetsmodulConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="17 BankTableAdapter" GeneratorDataComponentClassName="_17_BankTableAdapter" Name="17 Bank" UserDataComponentName="17 BankTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (MySettings)" DbObjectName="Likviditetsmodul.dbo.[17 Bank]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Bankonto, Bankontonavn FROM dbo.[17 Bank]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Bankonto" DataSetColumn="Bankonto" />
+              <Mapping SourceColumn="Bankontonavn" DataSetColumn="Bankontonavn" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LikviditetsmodulDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LikviditetsmodulDataSet1" msprop:Generator_UserDSName="LikviditetsmodulDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="_x0031_7_x0020_Bank" msprop:Generator_TableClassName="_17_BankDataTable" msprop:Generator_TableVarName="table17_Bank" msprop:Generator_TablePropName="_17_Bank" msprop:Generator_RowDeletingName="_17_BankRowDeleting" msprop:Generator_RowChangingName="_17_BankRowChanging" msprop:Generator_RowEvHandlerName="_17_BankRowChangeEventHandler" msprop:Generator_RowDeletedName="_17_BankRowDeleted" msprop:Generator_UserTableName="17 Bank" msprop:Generator_RowChangedName="_17_BankRowChanged" msprop:Generator_RowEvArgName="_17_BankRowChangeEvent" msprop:Generator_RowClassName="_17_BankRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bankonto" msprop:Generator_ColumnVarNameInTable="columnBankonto" msprop:Generator_ColumnPropNameInRow="Bankonto" msprop:Generator_ColumnPropNameInTable="BankontoColumn" msprop:Generator_UserColumnName="Bankonto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bankontonavn" msprop:Generator_ColumnVarNameInTable="columnBankontonavn" msprop:Generator_ColumnPropNameInRow="Bankontonavn" msprop:Generator_ColumnPropNameInTable="BankontonavnColumn" msprop:Generator_UserColumnName="Bankontonavn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

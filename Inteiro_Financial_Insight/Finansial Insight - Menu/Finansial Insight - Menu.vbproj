@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CB93E3C-5A7E-42E1-B1A0-AB2DE17DDC4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Finansial_Insight___Menu.My.MyApplication</StartupObject>
+    <RootNamespace>Finansial_Insight___Menu</RootNamespace>
+    <AssemblyName>Finansial Insight - Menu</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Finansial Insight - Menu.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Finansial Insight - Menu.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrationsmenu.Designer.vb">
+      <DependentUpon>Administrationsmenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrationsmenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrugerDataSet.Designer.vb" />
+    <Compile Include="Brugere.Designer.vb">
+      <DependentUpon>Brugere.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Brugere.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budget.Designer.vb">
+      <DependentUpon>Budget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Budget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1_sted_saldo.Designer.vb">
+      <DependentUpon>DataSet1_sted_saldo.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hovedmenu.Designer.vb">
+      <DependentUpon>Hovedmenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hovedmenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportCVS_filer.Designer.vb">
+      <DependentUpon>ImportCVS_filer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportCVS_filer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indtastningsmenu .Designer.vb">
+      <DependentUpon>Indtastningsmenu .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Indtastningsmenu .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet1_sted_saldo.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet1_sted_saldo.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet3Hovedformål.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3Hovedformål.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet3Hovedformål.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3Hovedformål.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet3_test.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3_test.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet4.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet4.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet5BrugerGruppe2.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet5Version.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSet5Version.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetBruger.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetBruger.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetBrugerGruppe.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetBrugerGruppe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetF1_Hovedkonto.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSetF1_Hovedkonto.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetG1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetG1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetG2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetG2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetLikviditet.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetLikviditet.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetLikviditet_2_1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet_2_1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSettest.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSettest.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvDranst.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvDranst.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetVersion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetVersion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetVG2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetVG2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvHovedformål.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedformål.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvHovedfunktion.Designer.vb">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedfunktion.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvHovedfuntion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedfuntion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvHovedkonto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedkonto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSetvRegkonto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSetvRegkonto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inteiro_Financial_InsightDataSet_vLikviditet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inteiro_Financial_InsightDataSet_vLikviditet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LikviditetsmodulDataSetBudgetkørsel_2.Designer.vb">
+      <DependentUpon>LikviditetsmodulDataSetBudgetkørsel_2.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="vG1Dataset.Designer.vb">
+      <DependentUpon>vG1Dataset.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="vG1Dataset.vb">
+      <DependentUpon>vG1Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vG2Dataset.Designer.vb">
+      <DependentUpon>vG2Dataset.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="vG2Dataset.vb">
+      <DependentUpon>vG2Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vRegkontoDataSet.Designer.vb">
+      <DependentUpon>vRegkontoDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="vStedDataSet1.Designer.vb">
+      <DependentUpon>vStedDataSet1.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administrationsmenu.resx">
+      <DependentUpon>Administrationsmenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Brugere.resx">
+      <DependentUpon>Brugere.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Budget.resx">
+      <DependentUpon>Budget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hovedmenu.resx">
+      <DependentUpon>Hovedmenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportCVS_filer.resx">
+      <DependentUpon>ImportCVS_filer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indtastningsmenu .resx">
+      <DependentUpon>Indtastningsmenu .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DataSet1_sted_saldo.xsc">
+      <DependentUpon>DataSet1_sted_saldo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1_sted_saldo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1_sted_saldo.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1_sted_saldo.xss">
+      <DependentUpon>DataSet1_sted_saldo.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet1_sted_saldo.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet1_sted_saldo.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet1_sted_saldo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet1_sted_saldo.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet1_sted_saldo.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet1_sted_saldo.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3Hovedformål.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3Hovedformål.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3Hovedformål.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet3Hovedformål.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3Hovedformål.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3Hovedformål.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3_test.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3_test.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3_test.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet3_test.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet3_test.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet3_test.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet4.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet4.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet5BrugerGruppe2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet5BrugerGruppe2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet5Version.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet5Version.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet5Version.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet5Version.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet5Version.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet5Version.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBruger.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetBruger.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBruger.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetBruger.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBruger.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetBruger.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBrugerGruppe.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetBrugerGruppe.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBrugerGruppe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetBrugerGruppe.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetBrugerGruppe.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetBrugerGruppe.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetF1_Hovedkonto.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetF1_Hovedkonto.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetF1_Hovedkonto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetF1_Hovedkonto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetF1_Hovedkonto.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetF1_Hovedkonto.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetG1.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetG1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetG1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetG1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetG1.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetG1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetG2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetG2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetG2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetG2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetG2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetG2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditet.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetLikviditet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditet.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditetsbudgetcsvimport.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditet_2_1.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet_2_1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditet_2_1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetLikviditet_2_1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetLikviditet_2_1.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetLikviditet_2_1.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSettest.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSettest.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSettest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSettest.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSettest.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSettest.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvDranst.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvDranst.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvDranst.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvDranst.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvDranst.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvDranst.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVersion.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVersion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVersion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetVersion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVersion.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVersion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVG2.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVG2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVG2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetVG2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetVG2.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetVG2.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedformål.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedformål.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedformål.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvHovedformål.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedformål.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedformål.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedfunktion.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedfunktion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedfunktion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvHovedfunktion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedfunktion.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedfunktion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedfuntion.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedfuntion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedfuntion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvHovedfuntion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedfuntion.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedfuntion.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedkonto.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedkonto.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedkonto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvHovedkonto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvHovedkonto.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvHovedkonto.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvRegkonto.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvRegkonto.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvRegkonto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSetvRegkonto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSetvRegkonto.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSetvRegkonto.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_vLikviditet.xsc">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_vLikviditet.xsd</DependentUpon>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_vLikviditet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inteiro_Financial_InsightDataSet_vLikviditet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inteiro_Financial_InsightDataSet_vLikviditet.xss">
+      <DependentUpon>Inteiro_Financial_InsightDataSet_vLikviditet.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSetBudgetkørsel_2.xsc">
+      <DependentUpon>LikviditetsmodulDataSetBudgetkørsel_2.xsd</DependentUpon>
+    </None>
+    <None Include="LikviditetsmodulDataSetBudgetkørsel_2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LikviditetsmodulDataSetBudgetkørsel_2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LikviditetsmodulDataSetBudgetkørsel_2.xss">
+      <DependentUpon>LikviditetsmodulDataSetBudgetkørsel_2.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSet+BrugergruppeDataTable.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSet+BrugergruppeRow.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSet+BrugergruppeRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSet+BrugergruppeRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSet.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSetTableAdapters.BrugergruppeTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.BrugerGruppeDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.Indtastninger.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSet+KorrektionsFactDataTable.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSet+KorrektionsFactRow.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSet+KorrektionsFactRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSet+KorrektionsFactRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSet.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSetTableAdapters.KorrektionsFactTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.KorrectionsFactDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet+RegkontoDataTable.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet+RegkontoRow.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet+RegkontoRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet+RegkontoRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1+_17_BankDataTable.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1+_17_BankRow.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1+_17_BankRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1+_17_BankRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet1TableAdapters._17_BankTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2+_02_ArtskontoDataTable.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2+_02_ArtskontoRow.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2+_02_ArtskontoRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2+_02_ArtskontoRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2TableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSet2TableAdapters._02_ArtskontoTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSetTableAdapters.RegkontoTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Finansial_insight.LikviditetsmodulDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="vG1Dataset.xsc">
+      <DependentUpon>vG1Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="vG1Dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vG1Dataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vG1Dataset.xss">
+      <DependentUpon>vG1Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="vG2Dataset.xsc">
+      <DependentUpon>vG2Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="vG2Dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vG2Dataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vG2Dataset.xss">
+      <DependentUpon>vG2Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="vRegkontoDataSet.xsc">
+      <DependentUpon>vRegkontoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vRegkontoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vRegkontoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vRegkontoDataSet.xss">
+      <DependentUpon>vRegkontoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vStedDataSet1.xsc">
+      <DependentUpon>vStedDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="vStedDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vStedDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vStedDataSet1.xss">
+      <DependentUpon>vStedDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Finansial insight\Finansial Insight Indtastning formular.vbproj">
+      <Project>{7806F110-4A2C-4163-8C70-05753EEB2485}</Project>
+      <Name>Finansial Insight Indtastning formular</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WalkDataSet6" targetNamespace="http://tempuri.org/WalkDataSet6.xsd" xmlns:mstns="http://tempuri.org/WalkDataSet6.xsd" xmlns="http://tempuri.org/WalkDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WalkConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WalkConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Walk.My.MySettings.GlobalReference.Default.WalkConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vWalkDataTableAdapter" GeneratorDataComponentClassName="vWalkDataTableAdapter" Name="vWalkData" UserDataComponentName="vWalkDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WalkConnectionString1 (MySettings)" DbObjectName="Walk.dbo.vWalkData" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dato, [Antal skridt], [Antal Km], [Antal minutter], [Antal kalorier] FROM dbo.vWalkData</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Dato" DataSetColumn="Dato" />
+              <Mapping SourceColumn="Antal skridt" DataSetColumn="Antal skridt" />
+              <Mapping SourceColumn="Antal Km" DataSetColumn="Antal Km" />
+              <Mapping SourceColumn="Antal minutter" DataSetColumn="Antal minutter" />
+              <Mapping SourceColumn="Antal kalorier" DataSetColumn="Antal kalorier" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WalkDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="WalkDataSet6" msprop:Generator_UserDSName="WalkDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vWalkData" msprop:Generator_TableClassName="vWalkDataDataTable" msprop:Generator_TableVarName="tablevWalkData" msprop:Generator_TablePropName="vWalkData" msprop:Generator_RowDeletingName="vWalkDataRowDeleting" msprop:Generator_RowChangingName="vWalkDataRowChanging" msprop:Generator_RowEvHandlerName="vWalkDataRowChangeEventHandler" msprop:Generator_RowDeletedName="vWalkDataRowDeleted" msprop:Generator_UserTableName="vWalkData" msprop:Generator_RowChangedName="vWalkDataRowChanged" msprop:Generator_RowEvArgName="vWalkDataRowChangeEvent" msprop:Generator_RowClassName="vWalkDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dato" msprop:Generator_ColumnVarNameInTable="columnDato" msprop:Generator_ColumnPropNameInRow="Dato" msprop:Generator_ColumnPropNameInTable="DatoColumn" msprop:Generator_UserColumnName="Dato" type="xs:dateTime" />
+              <xs:element name="Antal_x0020_skridt" msprop:Generator_ColumnVarNameInTable="columnAntal_skridt" msprop:Generator_ColumnPropNameInRow="Antal_skridt" msprop:Generator_ColumnPropNameInTable="Antal_skridtColumn" msprop:Generator_UserColumnName="Antal skridt" type="xs:double" minOccurs="0" />
+              <xs:element name="Antal_x0020_Km" msprop:Generator_ColumnVarNameInTable="columnAntal_Km" msprop:Generator_ColumnPropNameInRow="Antal_Km" msprop:Generator_ColumnPropNameInTable="Antal_KmColumn" msprop:Generator_UserColumnName="Antal Km" type="xs:double" minOccurs="0" />
+              <xs:element name="Antal_x0020_minutter" msprop:Generator_ColumnVarNameInTable="columnAntal_minutter" msprop:Generator_ColumnPropNameInRow="Antal_minutter" msprop:Generator_ColumnPropNameInTable="Antal_minutterColumn" msprop:Generator_UserColumnName="Antal minutter" type="xs:double" minOccurs="0" />
+              <xs:element name="Antal_x0020_kalorier" msprop:Generator_ColumnVarNameInTable="columnAntal_kalorier" msprop:Generator_ColumnPropNameInRow="Antal_kalorier" msprop:Generator_ColumnPropNameInTable="Antal_kalorierColumn" msprop:Generator_UserColumnName="Antal kalorier" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

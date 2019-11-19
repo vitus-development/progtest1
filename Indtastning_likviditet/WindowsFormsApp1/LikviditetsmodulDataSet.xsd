@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LikviditetsmodulDataSet" targetNamespace="http://tempuri.org/LikviditetsmodulDataSet.xsd" xmlns:mstns="http://tempuri.org/LikviditetsmodulDataSet.xsd" xmlns="http://tempuri.org/LikviditetsmodulDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LikviditetsmodulConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LikviditetsmodulConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.LikviditetsmodulConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Likviditetsmodul_lønTableAdapter" GeneratorDataComponentClassName="Likviditetsmodul_lønTableAdapter" Name="Likviditetsmodul_løn" UserDataComponentName="Likviditetsmodul_lønTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (Settings)" DbObjectName="Likviditetsmodul.dbo.Likviditetsmodul_løn" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Løn_id, [Reg kontonr], [Reg kontonavn], Statushenvisningskonto, Kildetype, Segment, KreditorNr, KredtorForfaldsDag, Bogføringstype, Bilagsnr, RegMaskinNrId, Bogføringsdato, Maskinnr, Beløb, Bruttobeløb, [Debet Kredit], Dranst, Art1, Art2 FROM dbo.Likviditetsmodul_løn</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Løn_id" DataSetColumn="Løn_id" />
+              <Mapping SourceColumn="Reg kontonr" DataSetColumn="Reg kontonr" />
+              <Mapping SourceColumn="Reg kontonavn" DataSetColumn="Reg kontonavn" />
+              <Mapping SourceColumn="Statushenvisningskonto" DataSetColumn="Statushenvisningskonto" />
+              <Mapping SourceColumn="Kildetype" DataSetColumn="Kildetype" />
+              <Mapping SourceColumn="Segment" DataSetColumn="Segment" />
+              <Mapping SourceColumn="KreditorNr" DataSetColumn="KreditorNr" />
+              <Mapping SourceColumn="KredtorForfaldsDag" DataSetColumn="KredtorForfaldsDag" />
+              <Mapping SourceColumn="Bogføringstype" DataSetColumn="Bogføringstype" />
+              <Mapping SourceColumn="Bilagsnr" DataSetColumn="Bilagsnr" />
+              <Mapping SourceColumn="RegMaskinNrId" DataSetColumn="RegMaskinNrId" />
+              <Mapping SourceColumn="Bogføringsdato" DataSetColumn="Bogføringsdato" />
+              <Mapping SourceColumn="Maskinnr" DataSetColumn="Maskinnr" />
+              <Mapping SourceColumn="Beløb" DataSetColumn="Beløb" />
+              <Mapping SourceColumn="Bruttobeløb" DataSetColumn="Bruttobeløb" />
+              <Mapping SourceColumn="Debet Kredit" DataSetColumn="Debet Kredit" />
+              <Mapping SourceColumn="Dranst" DataSetColumn="Dranst" />
+              <Mapping SourceColumn="Art1" DataSetColumn="Art1" />
+              <Mapping SourceColumn="Art2" DataSetColumn="Art2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LikviditetsmodulDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LikviditetsmodulDataSet" msprop:Generator_UserDSName="LikviditetsmodulDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Likviditetsmodul_løn" msprop:Generator_TableClassName="Likviditetsmodul_lønDataTable" msprop:Generator_TableVarName="tableLikviditetsmodul_løn" msprop:Generator_TablePropName="Likviditetsmodul_løn" msprop:Generator_RowDeletingName="Likviditetsmodul_lønRowDeleting" msprop:Generator_RowChangingName="Likviditetsmodul_lønRowChanging" msprop:Generator_RowEvHandlerName="Likviditetsmodul_lønRowChangeEventHandler" msprop:Generator_RowDeletedName="Likviditetsmodul_lønRowDeleted" msprop:Generator_UserTableName="Likviditetsmodul_løn" msprop:Generator_RowChangedName="Likviditetsmodul_lønRowChanged" msprop:Generator_RowEvArgName="Likviditetsmodul_lønRowChangeEvent" msprop:Generator_RowClassName="Likviditetsmodul_lønRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Løn_id" msprop:Generator_ColumnVarNameInTable="columnLøn_id" msprop:Generator_ColumnPropNameInRow="Løn_id" msprop:Generator_ColumnPropNameInTable="Løn_idColumn" msprop:Generator_UserColumnName="Løn_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reg_x0020_kontonr" msprop:Generator_ColumnVarNameInTable="columnReg_kontonr" msprop:Generator_ColumnPropNameInRow="Reg_kontonr" msprop:Generator_ColumnPropNameInTable="Reg_kontonrColumn" msprop:Generator_UserColumnName="Reg kontonr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reg_x0020_kontonavn" msprop:Generator_ColumnVarNameInTable="columnReg_kontonavn" msprop:Generator_ColumnPropNameInRow="Reg_kontonavn" msprop:Generator_ColumnPropNameInTable="Reg_kontonavnColumn" msprop:Generator_UserColumnName="Reg kontonavn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Statushenvisningskonto" msprop:Generator_ColumnVarNameInTable="columnStatushenvisningskonto" msprop:Generator_ColumnPropNameInRow="Statushenvisningskonto" msprop:Generator_ColumnPropNameInTable="StatushenvisningskontoColumn" msprop:Generator_UserColumnName="Statushenvisningskonto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kildetype" msprop:Generator_ColumnVarNameInTable="columnKildetype" msprop:Generator_ColumnPropNameInRow="Kildetype" msprop:Generator_ColumnPropNameInTable="KildetypeColumn" msprop:Generator_UserColumnName="Kildetype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Segment" msprop:Generator_ColumnVarNameInTable="columnSegment" msprop:Generator_ColumnPropNameInRow="Segment" msprop:Generator_ColumnPropNameInTable="SegmentColumn" msprop:Generator_UserColumnName="Segment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KreditorNr" msprop:Generator_ColumnVarNameInTable="columnKreditorNr" msprop:Generator_ColumnPropNameInRow="KreditorNr" msprop:Generator_ColumnPropNameInTable="KreditorNrColumn" msprop:Generator_UserColumnName="KreditorNr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KredtorForfaldsDag" msprop:Generator_ColumnVarNameInTable="columnKredtorForfaldsDag" msprop:Generator_ColumnPropNameInRow="KredtorForfaldsDag" msprop:Generator_ColumnPropNameInTable="KredtorForfaldsDagColumn" msprop:Generator_UserColumnName="KredtorForfaldsDag" type="xs:int" />
+              <xs:element name="Bogføringstype" msprop:Generator_ColumnVarNameInTable="columnBogføringstype" msprop:Generator_ColumnPropNameInRow="Bogføringstype" msprop:Generator_ColumnPropNameInTable="BogføringstypeColumn" msprop:Generator_UserColumnName="Bogføringstype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bilagsnr" msprop:Generator_ColumnVarNameInTable="columnBilagsnr" msprop:Generator_ColumnPropNameInRow="Bilagsnr" msprop:Generator_ColumnPropNameInTable="BilagsnrColumn" msprop:Generator_UserColumnName="Bilagsnr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegMaskinNrId" msprop:Generator_ColumnVarNameInTable="columnRegMaskinNrId" msprop:Generator_ColumnPropNameInRow="RegMaskinNrId" msprop:Generator_ColumnPropNameInTable="RegMaskinNrIdColumn" msprop:Generator_UserColumnName="RegMaskinNrId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bogføringsdato" msprop:Generator_ColumnVarNameInTable="columnBogføringsdato" msprop:Generator_ColumnPropNameInRow="Bogføringsdato" msprop:Generator_ColumnPropNameInTable="BogføringsdatoColumn" msprop:Generator_UserColumnName="Bogføringsdato" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Maskinnr" msprop:Generator_ColumnVarNameInTable="columnMaskinnr" msprop:Generator_ColumnPropNameInRow="Maskinnr" msprop:Generator_ColumnPropNameInTable="MaskinnrColumn" msprop:Generator_UserColumnName="Maskinnr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Beløb" msprop:Generator_ColumnVarNameInTable="columnBeløb" msprop:Generator_ColumnPropNameInRow="Beløb" msprop:Generator_ColumnPropNameInTable="BeløbColumn" msprop:Generator_UserColumnName="Beløb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bruttobeløb" msprop:Generator_ColumnVarNameInTable="columnBruttobeløb" msprop:Generator_ColumnPropNameInRow="Bruttobeløb" msprop:Generator_ColumnPropNameInTable="BruttobeløbColumn" msprop:Generator_UserColumnName="Bruttobeløb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debet_x0020_Kredit" msprop:Generator_ColumnVarNameInTable="columnDebet_Kredit" msprop:Generator_ColumnPropNameInRow="Debet_Kredit" msprop:Generator_ColumnPropNameInTable="Debet_KreditColumn" msprop:Generator_UserColumnName="Debet Kredit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dranst" msprop:Generator_ColumnVarNameInTable="columnDranst" msprop:Generator_ColumnPropNameInRow="Dranst" msprop:Generator_ColumnPropNameInTable="DranstColumn" msprop:Generator_UserColumnName="Dranst" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Art1" msprop:Generator_ColumnVarNameInTable="columnArt1" msprop:Generator_ColumnPropNameInRow="Art1" msprop:Generator_ColumnPropNameInTable="Art1Column" msprop:Generator_UserColumnName="Art1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Art2" msprop:Generator_ColumnVarNameInTable="columnArt2" msprop:Generator_ColumnPropNameInRow="Art2" msprop:Generator_ColumnPropNameInTable="Art2Column" msprop:Generator_UserColumnName="Art2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

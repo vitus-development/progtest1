@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inteiro_Financial_InsightDataSet5BrugerGruppe" targetNamespace="http://tempuri.org/Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd" xmlns:mstns="http://tempuri.org/Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd" xmlns="http://tempuri.org/Inteiro_Financial_InsightDataSet5BrugerGruppe2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inteiro_Fnancial_Insight.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vBrugerGruppeTableAdapter" GeneratorDataComponentClassName="vBrugerGruppeTableAdapter" Name="vBrugerGruppe" UserDataComponentName="vBrugerGruppeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vBrugerGruppe" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     BrugerGruppe
+FROM        vBrugerGruppe
+ORDER BY BrugerGruppe</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BrugerGruppe" DataSetColumn="BrugerGruppe" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vBrugerGruppe" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BrugerGruppe FROM vBrugerGruppe ORDER BY BrugerGruppe</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inteiro_Financial_InsightDataSet5BrugerGruppe" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Inteiro_Financial_InsightDataSet5BrugerGruppe" msprop:Generator_UserDSName="Inteiro_Financial_InsightDataSet5BrugerGruppe">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vBrugerGruppe" msprop:Generator_TableClassName="vBrugerGruppeDataTable" msprop:Generator_TableVarName="tablevBrugerGruppe" msprop:Generator_RowChangedName="vBrugerGruppeRowChanged" msprop:Generator_TablePropName="vBrugerGruppe" msprop:Generator_RowDeletingName="vBrugerGruppeRowDeleting" msprop:Generator_RowChangingName="vBrugerGruppeRowChanging" msprop:Generator_RowEvHandlerName="vBrugerGruppeRowChangeEventHandler" msprop:Generator_RowDeletedName="vBrugerGruppeRowDeleted" msprop:Generator_RowClassName="vBrugerGruppeRow" msprop:Generator_UserTableName="vBrugerGruppe" msprop:Generator_RowEvArgName="vBrugerGruppeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BrugerGruppe" msprop:Generator_ColumnVarNameInTable="columnBrugerGruppe" msprop:Generator_ColumnPropNameInRow="BrugerGruppe" msprop:Generator_ColumnPropNameInTable="BrugerGruppeColumn" msprop:Generator_UserColumnName="BrugerGruppe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

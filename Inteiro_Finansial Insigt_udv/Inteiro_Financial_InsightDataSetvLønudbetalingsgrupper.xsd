@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper" targetNamespace="http://tempuri.org/Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper.xsd" xmlns:mstns="http://tempuri.org/Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper.xsd" xmlns="http://tempuri.org/Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inteiro_Finansial_Insigt_udv.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vLønudbetalingsgrupperTableAdapter" GeneratorDataComponentClassName="vLønudbetalingsgrupperTableAdapter" Name="vLønudbetalingsgrupper" UserDataComponentName="vLønudbetalingsgrupperTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vLønudbetalingsgrupper" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Bruger, Dim02, Dim02Value, Dim03, Dim03Value, Dim03Label FROM dbo.vLønudbetalingsgrupper</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Bruger" DataSetColumn="Bruger" />
+              <Mapping SourceColumn="Dim02" DataSetColumn="Dim02" />
+              <Mapping SourceColumn="Dim02Value" DataSetColumn="Dim02Value" />
+              <Mapping SourceColumn="Dim03" DataSetColumn="Dim03" />
+              <Mapping SourceColumn="Dim03Value" DataSetColumn="Dim03Value" />
+              <Mapping SourceColumn="Dim03Label" DataSetColumn="Dim03Label" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper" msprop:Generator_UserDSName="Inteiro_Financial_InsightDataSetvLønudbetalingsgrupper">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vLønudbetalingsgrupper" msprop:Generator_TableClassName="vLønudbetalingsgrupperDataTable" msprop:Generator_TableVarName="tablevLønudbetalingsgrupper" msprop:Generator_TablePropName="vLønudbetalingsgrupper" msprop:Generator_RowDeletingName="vLønudbetalingsgrupperRowDeleting" msprop:Generator_RowChangingName="vLønudbetalingsgrupperRowChanging" msprop:Generator_RowEvHandlerName="vLønudbetalingsgrupperRowChangeEventHandler" msprop:Generator_RowDeletedName="vLønudbetalingsgrupperRowDeleted" msprop:Generator_UserTableName="vLønudbetalingsgrupper" msprop:Generator_RowChangedName="vLønudbetalingsgrupperRowChanged" msprop:Generator_RowEvArgName="vLønudbetalingsgrupperRowChangeEvent" msprop:Generator_RowClassName="vLønudbetalingsgrupperRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bruger" msprop:Generator_ColumnVarNameInTable="columnBruger" msprop:Generator_ColumnPropNameInRow="Bruger" msprop:Generator_ColumnPropNameInTable="BrugerColumn" msprop:Generator_UserColumnName="Bruger" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dim02" msprop:Generator_ColumnVarNameInTable="columnDim02" msprop:Generator_ColumnPropNameInRow="Dim02" msprop:Generator_ColumnPropNameInTable="Dim02Column" msprop:Generator_UserColumnName="Dim02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dim02Value" msprop:Generator_ColumnVarNameInTable="columnDim02Value" msprop:Generator_ColumnPropNameInRow="Dim02Value" msprop:Generator_ColumnPropNameInTable="Dim02ValueColumn" msprop:Generator_UserColumnName="Dim02Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dim03" msprop:Generator_ColumnVarNameInTable="columnDim03" msprop:Generator_ColumnPropNameInRow="Dim03" msprop:Generator_ColumnPropNameInTable="Dim03Column" msprop:Generator_UserColumnName="Dim03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dim03Value" msprop:Generator_ColumnVarNameInTable="columnDim03Value" msprop:Generator_ColumnPropNameInRow="Dim03Value" msprop:Generator_ColumnPropNameInTable="Dim03ValueColumn" msprop:Generator_UserColumnName="Dim03Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dim03Label" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDim03Label" msprop:Generator_ColumnPropNameInRow="Dim03Label" msprop:Generator_ColumnPropNameInTable="Dim03LabelColumn" msprop:Generator_UserColumnName="Dim03Label" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="258" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

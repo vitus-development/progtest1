@@ -1,0 +1,10 @@
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\bin\Debug\Likviditet.dacpac
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\obj\Debug\Model.xml
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\obj\Debug\refactor.xml
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\obj\Debug\postdeploy.sql
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\obj\Debug\predeploy.sql
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\obj\Debug\Likviditet.dll
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\obj\Debug\Likviditet.pdb
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\bin\Output\Likviditet.dacpac
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\bin\Output\Likviditet.dll
+C:\Users\vbj\source\repos\Likviditet_indtastning\Likviditet\bin\Output\Likviditet.pdb

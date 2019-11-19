@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[WalkData]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[Dato] DATETIME NOT NULL, 
+    [Fornavn] TEXT NOT NULL, 
+    [Efternavn] TEXT NOT NULL, 
+    [Skridt] FLOAT NOT NULL DEFAULT 0, 
+    [Km] FLOAT NOT NULL DEFAULT 0, 
+    [Minutter] FLOAT NOT NULL DEFAULT 0, 
+    [Kalorier] FLOAT NOT NULL DEFAULT 0, 
+	[Noter] TEXT DEFAULT '-'
+)

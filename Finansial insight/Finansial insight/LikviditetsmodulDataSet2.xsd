@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LikviditetsmodulDataSet2" targetNamespace="http://tempuri.org/LikviditetsmodulDataSet2.xsd" xmlns:mstns="http://tempuri.org/LikviditetsmodulDataSet2.xsd" xmlns="http://tempuri.org/LikviditetsmodulDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="LikviditetsmodulConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LikviditetsmodulConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Finansial_insight.My.MySettings.GlobalReference.Default.LikviditetsmodulConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="02_ArtskontoTableAdapter" GeneratorDataComponentClassName="_02_ArtskontoTableAdapter" Name="02_Artskonto" UserDataComponentName="02_ArtskontoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (MySettings)" DbObjectName="Likviditetsmodul.dbo.[02_Artskonto]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Første benyttelsesår], Anvendes, A1, Artkontonavn_niv_1, art2, Artskonto, ArtskontoNavn FROM dbo.[02_Artskonto]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Første benyttelsesår" DataSetColumn="Første benyttelsesår" />
+              <Mapping SourceColumn="Anvendes" DataSetColumn="Anvendes" />
+              <Mapping SourceColumn="A1" DataSetColumn="A1" />
+              <Mapping SourceColumn="Artkontonavn_niv_1" DataSetColumn="Artkontonavn_niv_1" />
+              <Mapping SourceColumn="art2" DataSetColumn="art2" />
+              <Mapping SourceColumn="Artskonto" DataSetColumn="Artskonto" />
+              <Mapping SourceColumn="ArtskontoNavn" DataSetColumn="ArtskontoNavn" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LikviditetsmodulDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LikviditetsmodulDataSet2" msprop:Generator_UserDSName="LikviditetsmodulDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="_x0030_2_Artskonto" msprop:Generator_TableClassName="_02_ArtskontoDataTable" msprop:Generator_TableVarName="table02_Artskonto" msprop:Generator_TablePropName="_02_Artskonto" msprop:Generator_RowDeletingName="_02_ArtskontoRowDeleting" msprop:Generator_RowChangingName="_02_ArtskontoRowChanging" msprop:Generator_RowEvHandlerName="_02_ArtskontoRowChangeEventHandler" msprop:Generator_RowDeletedName="_02_ArtskontoRowDeleted" msprop:Generator_UserTableName="02_Artskonto" msprop:Generator_RowChangedName="_02_ArtskontoRowChanged" msprop:Generator_RowEvArgName="_02_ArtskontoRowChangeEvent" msprop:Generator_RowClassName="_02_ArtskontoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Første_x0020_benyttelsesår" msprop:Generator_ColumnVarNameInTable="columnFørste_benyttelsesår" msprop:Generator_ColumnPropNameInRow="Første_benyttelsesår" msprop:Generator_ColumnPropNameInTable="Første_benyttelsesårColumn" msprop:Generator_UserColumnName="Første benyttelsesår" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Anvendes" msprop:Generator_ColumnVarNameInTable="columnAnvendes" msprop:Generator_ColumnPropNameInRow="Anvendes" msprop:Generator_ColumnPropNameInTable="AnvendesColumn" msprop:Generator_UserColumnName="Anvendes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="A1" msprop:Generator_ColumnVarNameInTable="columnA1" msprop:Generator_ColumnPropNameInRow="A1" msprop:Generator_ColumnPropNameInTable="A1Column" msprop:Generator_UserColumnName="A1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Artkontonavn_niv_1" msprop:Generator_ColumnVarNameInTable="columnArtkontonavn_niv_1" msprop:Generator_ColumnPropNameInRow="Artkontonavn_niv_1" msprop:Generator_ColumnPropNameInTable="Artkontonavn_niv_1Column" msprop:Generator_UserColumnName="Artkontonavn_niv_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="art2" msprop:Generator_ColumnVarNameInTable="columnart2" msprop:Generator_ColumnPropNameInRow="art2" msprop:Generator_ColumnPropNameInTable="art2Column" msprop:Generator_UserColumnName="art2" type="xs:int" minOccurs="0" />
+              <xs:element name="Artskonto" msprop:Generator_ColumnVarNameInTable="columnArtskonto" msprop:Generator_ColumnPropNameInRow="Artskonto" msprop:Generator_ColumnPropNameInTable="ArtskontoColumn" msprop:Generator_UserColumnName="Artskonto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="267" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtskontoNavn" msprop:Generator_ColumnVarNameInTable="columnArtskontoNavn" msprop:Generator_ColumnPropNameInRow="ArtskontoNavn" msprop:Generator_ColumnPropNameInTable="ArtskontoNavnColumn" msprop:Generator_UserColumnName="ArtskontoNavn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

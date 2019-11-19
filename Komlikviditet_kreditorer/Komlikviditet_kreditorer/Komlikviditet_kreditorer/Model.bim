@@ -1,0 +1,1064 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "en-GB",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/Vitus;Likviditetsmodul",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "VBJXPS2017",
+            "database": "Likviditetsmodul"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {},
+        "credential": {
+          "AuthenticationKind": "Windows",
+          "kind": "SQL",
+          "path": "vbjxps2017;Likviditetsmodul",
+          "Username": "Qbit\\vbj",
+          "EncryptConnection": false,
+          "PrivacySetting": "Private"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "01_Tid",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "Dato",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "Dato"
+          },
+          {
+            "name": "Dato2",
+            "dataType": "string",
+            "sourceColumn": "Dato2"
+          },
+          {
+            "name": "Periode",
+            "dataType": "string",
+            "sourceColumn": "Periode"
+          },
+          {
+            "name": "Måned_2",
+            "dataType": "string",
+            "sourceColumn": "Måned_2"
+          },
+          {
+            "name": "År",
+            "dataType": "int64",
+            "sourceColumn": "År"
+          },
+          {
+            "name": "Forecast_1_år",
+            "dataType": "int64",
+            "sourceColumn": "Forecast_1_år"
+          },
+          {
+            "name": "Forecast_2_år",
+            "dataType": "int64",
+            "sourceColumn": "Forecast_2_år"
+          },
+          {
+            "name": "Forecast_3_år",
+            "dataType": "int64",
+            "sourceColumn": "Forecast_3_år"
+          },
+          {
+            "name": "ISOugenr",
+            "dataType": "int64",
+            "sourceColumn": "ISOugenr"
+          },
+          {
+            "name": "Dag",
+            "dataType": "int64",
+            "sourceColumn": "Dag"
+          },
+          {
+            "name": "Måned",
+            "dataType": "int64",
+            "sourceColumn": "Måned"
+          },
+          {
+            "name": "Ugenr",
+            "dataType": "int64",
+            "sourceColumn": "Ugenr"
+          },
+          {
+            "name": "Ugedag",
+            "dataType": "int64",
+            "sourceColumn": "Ugedag"
+          },
+          {
+            "name": "Kvartal",
+            "dataType": "int64",
+            "sourceColumn": "Kvartal"
+          },
+          {
+            "name": "Bogføringsdato",
+            "dataType": "string",
+            "sourceColumn": "Bogføringsdato"
+          },
+          {
+            "type": "calculated",
+            "name": "Slutdato",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "expression": "ENDOFYEAR('01_Tid'[Dato])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_01_Tid = Source{[Schema=\"dbo\",Item=\"01_Tid\"]}[Data],",
+                "    #\"Sorted Rows\" = Table.Sort(dbo_01_Tid,{{\"Dato2\", Order.Ascending}, {\"Dato\", Order.Ascending}})",
+                "in",
+                "    #\"Sorted Rows\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "02_Artskonto",
+        "columns": [
+          {
+            "name": "Første benyttelsesår",
+            "dataType": "dateTime",
+            "sourceColumn": "Første benyttelsesår"
+          },
+          {
+            "name": "Anvendes",
+            "dataType": "string",
+            "sourceColumn": "Anvendes"
+          },
+          {
+            "name": "A1",
+            "dataType": "string",
+            "sourceColumn": "A1"
+          },
+          {
+            "name": "Artkontonavn_niv_1",
+            "dataType": "string",
+            "sourceColumn": "Artkontonavn_niv_1"
+          },
+          {
+            "name": "art2",
+            "dataType": "int64",
+            "sourceColumn": "art2"
+          },
+          {
+            "name": "Artskonto",
+            "dataType": "string",
+            "sourceColumn": "Artskonto"
+          },
+          {
+            "name": "ArtskontoNavn",
+            "dataType": "string",
+            "sourceColumn": "ArtskontoNavn"
+          },
+          {
+            "name": "Artskonto_niv_2",
+            "dataType": "string",
+            "sourceColumn": "Artskonto_niv_2"
+          },
+          {
+            "name": "Artskonto_niv_1",
+            "dataType": "string",
+            "sourceColumn": "Artskonto_niv_1"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_02_Artskonto = Source{[Schema=\"dbo\",Item=\"02_Artskonto\"]}[Data]",
+                "in",
+                "    dbo_02_Artskonto"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "03_Artkonto_niv_1",
+        "columns": [
+          {
+            "name": "A1",
+            "dataType": "string",
+            "sourceColumn": "A1"
+          },
+          {
+            "name": "Artkontonavn_niv_1",
+            "dataType": "string",
+            "sourceColumn": "Artkontonavn_niv_1"
+          },
+          {
+            "name": "art2",
+            "dataType": "int64",
+            "sourceColumn": "art2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_03_Artkonto_niv_1 = Source{[Schema=\"dbo\",Item=\"03_Artkonto_niv_1\"]}[Data]",
+                "in",
+                "    dbo_03_Artkonto_niv_1"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "04_Maskinnr",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID"
+          },
+          {
+            "name": "Maskinnr",
+            "dataType": "string",
+            "sourceColumn": "Maskinnr"
+          },
+          {
+            "name": "Navn",
+            "dataType": "string",
+            "sourceColumn": "Navn"
+          },
+          {
+            "name": "Andet",
+            "dataType": "string",
+            "sourceColumn": "Andet"
+          },
+          {
+            "name": "Maskinnr_Label",
+            "dataType": "string",
+            "sourceColumn": "Maskinnr_Label"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_04_Maskinnr = Source{[Schema=\"dbo\",Item=\"04_Maskinnr\"]}[Data]",
+                "in",
+                "    dbo_04_Maskinnr"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "05_Bogøringstype",
+        "columns": [
+          {
+            "name": "Bogføringstype",
+            "dataType": "string",
+            "sourceColumn": "Bogføringstype"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_05_Bogøringstype = Source{[Schema=\"dbo\",Item=\"05_Bogøringstype\"]}[Data]",
+                "in",
+                "    dbo_05_Bogøringstype"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "06_BogføringstypeMaskinr",
+        "columns": [
+          {
+            "name": "Bogføringstype",
+            "dataType": "string",
+            "sourceColumn": "Bogføringstype"
+          },
+          {
+            "name": "Maskinnr",
+            "dataType": "string",
+            "sourceColumn": "Maskinnr"
+          },
+          {
+            "name": "Navn",
+            "dataType": "string",
+            "sourceColumn": "Navn"
+          },
+          {
+            "name": "Andet",
+            "dataType": "string",
+            "sourceColumn": "Andet"
+          },
+          {
+            "name": "Reg kontonr",
+            "dataType": "string",
+            "sourceColumn": "Reg kontonr"
+          },
+          {
+            "name": "RegnrMaskinId",
+            "dataType": "string",
+            "sourceColumn": "RegnrMaskinId"
+          },
+          {
+            "type": "calculated",
+            "name": "Mask_Bogtype_Regkonto",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE('06_BogføringstypeMaskinr'[Maskinnr],CONCATENATE('06_BogføringstypeMaskinr'[Bogføringstype],'06_BogføringstypeMaskinr'[Reg kontonr]))"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_06_BogføringstypeMaskinr = Source{[Schema=\"dbo\",Item=\"06_BogføringstypeMaskinr\"]}[Data]",
+                "in",
+                "    dbo_06_BogføringstypeMaskinr"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "07_bilagsnr",
+        "columns": [
+          {
+            "name": "Bilagsnr",
+            "dataType": "string",
+            "sourceColumn": "Bilagsnr"
+          },
+          {
+            "type": "calculated",
+            "name": "Bilagsnr_niv_1",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE('07_bilagsnr'[Bilagsnr],\"-\",\"|\"),1)"
+          },
+          {
+            "type": "calculated",
+            "name": "Bilagsnr_niv_2",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE('07_bilagsnr'[Bilagsnr],\"-\",\"|\"),2)"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_07_bilagsnr = Source{[Schema=\"dbo\",Item=\"07_bilagsnr\"]}[Data]",
+                "in",
+                "    dbo_07_bilagsnr"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "16_Dransk",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID"
+          },
+          {
+            "name": "D1",
+            "dataType": "string",
+            "sourceColumn": "D1"
+          },
+          {
+            "name": "Første benyttelsesår",
+            "dataType": "dateTime",
+            "sourceColumn": "Første benyttelsesår"
+          },
+          {
+            "name": "IM Autoriseret",
+            "dataType": "string",
+            "sourceColumn": "IM Autoriseret"
+          },
+          {
+            "name": "Anvendes",
+            "dataType": "string",
+            "sourceColumn": "Anvendes"
+          },
+          {
+            "name": "Kontotekst",
+            "dataType": "string",
+            "sourceColumn": "Kontotekst"
+          },
+          {
+            "name": "Kontotype",
+            "dataType": "string",
+            "sourceColumn": "Kontotype"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_16_Dransk = Source{[Schema=\"dbo\",Item=\"16_Dransk\"]}[Data]",
+                "in",
+                "    dbo_16_Dransk"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Likviditetmodul",
+        "columns": [
+          {
+            "name": "Kommune nr",
+            "dataType": "double",
+            "sourceColumn": "Kommune nr"
+          },
+          {
+            "name": "År",
+            "dataType": "string",
+            "sourceColumn": "År"
+          },
+          {
+            "name": "Reg kontonr",
+            "dataType": "string",
+            "sourceColumn": "Reg kontonr"
+          },
+          {
+            "name": "Beløb",
+            "dataType": "double",
+            "sourceColumn": "Beløb"
+          },
+          {
+            "name": "Bruttobeløb",
+            "dataType": "double",
+            "sourceColumn": "Bruttobeløb"
+          },
+          {
+            "name": "Posteringstekst (slette pga  personfølsomme opl)",
+            "dataType": "string",
+            "sourceColumn": "Posteringstekst (slette pga  personfølsomme opl)"
+          },
+          {
+            "name": "Bogføringsdato",
+            "dataType": "string",
+            "sourceColumn": "Bogføringsdato"
+          },
+          {
+            "name": "Maskinnr",
+            "dataType": "string",
+            "sourceColumn": "Maskinnr"
+          },
+          {
+            "name": "Post ID",
+            "dataType": "string",
+            "sourceColumn": "Post ID"
+          },
+          {
+            "name": "F_10",
+            "dataType": "string",
+            "sourceColumn": "F_10"
+          },
+          {
+            "name": "F_12",
+            "dataType": "string",
+            "sourceColumn": "F_12"
+          },
+          {
+            "name": "F_13",
+            "dataType": "string",
+            "sourceColumn": "F_13"
+          },
+          {
+            "name": "F_14",
+            "dataType": "string",
+            "sourceColumn": "F_14"
+          },
+          {
+            "name": "F_15",
+            "dataType": "string",
+            "sourceColumn": "F_15"
+          },
+          {
+            "name": "F_16",
+            "dataType": "string",
+            "sourceColumn": "F_16"
+          },
+          {
+            "name": "Debet Kredit",
+            "dataType": "string",
+            "sourceColumn": "Debet Kredit"
+          },
+          {
+            "name": "Første benyttelsesår",
+            "dataType": "string",
+            "sourceColumn": "Første benyttelsesår"
+          },
+          {
+            "name": "F1",
+            "dataType": "string",
+            "sourceColumn": "F1"
+          },
+          {
+            "name": "F2",
+            "dataType": "string",
+            "sourceColumn": "F2"
+          },
+          {
+            "name": "F3",
+            "dataType": "string",
+            "sourceColumn": "F3"
+          },
+          {
+            "name": "Dranst",
+            "dataType": "string",
+            "sourceColumn": "Dranst"
+          },
+          {
+            "name": "Ejerforholdskode",
+            "dataType": "string",
+            "sourceColumn": "Ejerforholdskode"
+          },
+          {
+            "name": "S1 (stedkode)",
+            "dataType": "string",
+            "sourceColumn": "S1 (stedkode)"
+          },
+          {
+            "name": "S2 (stedkode)",
+            "dataType": "string",
+            "sourceColumn": "S2 (stedkode)"
+          },
+          {
+            "name": "F_26",
+            "dataType": "string",
+            "sourceColumn": "F_26"
+          },
+          {
+            "name": "G1",
+            "dataType": "string",
+            "sourceColumn": "G1"
+          },
+          {
+            "name": "Art1",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Art1"
+          },
+          {
+            "name": "Art2",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Art2"
+          },
+          {
+            "name": "T1",
+            "dataType": "string",
+            "sourceColumn": "T1"
+          },
+          {
+            "name": "T2",
+            "dataType": "string",
+            "sourceColumn": "T2"
+          },
+          {
+            "name": "U1",
+            "dataType": "string",
+            "sourceColumn": "U1"
+          },
+          {
+            "name": "U2",
+            "dataType": "string",
+            "sourceColumn": "U2"
+          },
+          {
+            "name": "U3",
+            "dataType": "string",
+            "sourceColumn": "U3"
+          },
+          {
+            "name": "U4",
+            "dataType": "string",
+            "sourceColumn": "U4"
+          },
+          {
+            "name": "U5",
+            "dataType": "string",
+            "sourceColumn": "U5"
+          },
+          {
+            "name": "Statushenvisningskonto",
+            "dataType": "string",
+            "sourceColumn": "Statushenvisningskonto"
+          },
+          {
+            "name": "Bogføringstype",
+            "dataType": "string",
+            "sourceColumn": "Bogføringstype"
+          },
+          {
+            "name": "Bilagsnr",
+            "dataType": "string",
+            "sourceColumn": "Bilagsnr"
+          },
+          {
+            "name": "Attesteret af",
+            "dataType": "string",
+            "sourceColumn": "Attesteret af"
+          },
+          {
+            "name": "F_61",
+            "dataType": "string",
+            "sourceColumn": "F_61"
+          },
+          {
+            "name": "F_62",
+            "dataType": "string",
+            "sourceColumn": "F_62"
+          },
+          {
+            "name": "F_63",
+            "dataType": "string",
+            "sourceColumn": "F_63"
+          },
+          {
+            "name": "G2",
+            "dataType": "string",
+            "sourceColumn": "G2"
+          },
+          {
+            "name": "G3",
+            "dataType": "string",
+            "sourceColumn": "G3"
+          },
+          {
+            "name": "G4",
+            "dataType": "string",
+            "sourceColumn": "G4"
+          },
+          {
+            "name": "Oprettelses dato",
+            "dataType": "string",
+            "sourceColumn": "Oprettelses dato"
+          },
+          {
+            "name": "Source",
+            "dataType": "string",
+            "sourceColumn": "Source"
+          },
+          {
+            "type": "calculated",
+            "name": "Artskonto",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(IF(Likviditetmodul[Art1] = BLANK(),\"0\",Likviditetmodul[Art1]),IF(Likviditetmodul[Art2] = BLANK(),\"0\",Likviditetmodul[Art2]))"
+          },
+          {
+            "type": "calculated",
+            "name": "Mask_Bogtype_Regkonto",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(Likviditetmodul[Maskinnr],CONCATENATE(Likviditetmodul[Bogføringstype],Likviditetmodul[Reg kontonr]))"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_Likviditetmodul_2_step_2 = Source{[Schema=\"dbo\",Item=\"Likviditetmodul_2_step_2\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_Likviditetmodul_2_step_2,{{\"Kommune nr\", type number}, {\"Bruttobeløb\", type number}, {\"Beløb\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum of Beløb",
+            "expression": "SUM([Beløb])"
+          },
+          {
+            "name": "Sum of Bruttobeløb",
+            "expression": "SUM([Bruttobeløb])"
+          },
+          {
+            "name": "ÅTD",
+            "expression": "CALCULATE(Likviditetmodul[Sum of Beløb],DATESYTD('01_Tid'[Dato]))"
+          }
+        ]
+      },
+      {
+        "name": "Kreditorer",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID"
+          },
+          {
+            "name": "Kreditorkonto",
+            "dataType": "string",
+            "sourceColumn": "Kreditorkonto"
+          },
+          {
+            "name": "CPR/CVR nummer",
+            "dataType": "string",
+            "sourceColumn": "CPR/CVR nummer"
+          },
+          {
+            "name": "Navn",
+            "dataType": "string",
+            "sourceColumn": "Navn"
+          },
+          {
+            "name": "Søgenavn",
+            "dataType": "string",
+            "sourceColumn": "Søgenavn"
+          },
+          {
+            "name": "Fakturakonto",
+            "dataType": "string",
+            "sourceColumn": "Fakturakonto"
+          },
+          {
+            "name": "Gruppe",
+            "dataType": "string",
+            "sourceColumn": "Gruppe"
+          },
+          {
+            "name": "Valuta",
+            "dataType": "string",
+            "sourceColumn": "Valuta"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_Kreditorer = Source{[Schema=\"dbo\",Item=\"Kreditorer\"]}[Data],",
+                "    #\"Filtered Rows\" = Table.SelectRows(dbo_Kreditorer, each [Kreditorkonto] <> null and [Kreditorkonto] <> \"\")",
+                "in",
+                "    #\"Filtered Rows\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Regkonto",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID"
+          },
+          {
+            "name": "F1",
+            "dataType": "string",
+            "sourceColumn": "F1"
+          },
+          {
+            "name": "F2",
+            "dataType": "string",
+            "sourceColumn": "F2"
+          },
+          {
+            "name": "F3",
+            "dataType": "string",
+            "sourceColumn": "F3"
+          },
+          {
+            "name": "G1",
+            "dataType": "string",
+            "sourceColumn": "G1"
+          },
+          {
+            "name": "G2",
+            "dataType": "string",
+            "sourceColumn": "G2"
+          },
+          {
+            "name": "D1",
+            "dataType": "string",
+            "sourceColumn": "D1"
+          },
+          {
+            "name": "S1",
+            "dataType": "string",
+            "sourceColumn": "S1"
+          },
+          {
+            "name": "Reg kontonr",
+            "dataType": "string",
+            "sourceColumn": "Reg kontonr"
+          },
+          {
+            "name": "Bankonto",
+            "dataType": "string",
+            "sourceColumn": "Bankonto"
+          },
+          {
+            "name": "Bankontonavn",
+            "dataType": "string",
+            "sourceColumn": "Bankontonavn"
+          },
+          {
+            "name": "Finansår",
+            "dataType": "int64",
+            "sourceColumn": "Finansår"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_Regkonto = Source{[Schema=\"dbo\",Item=\"Regkonto\"]}[Data]",
+                "in",
+                "    dbo_Regkonto"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "10A_kreditorbro_",
+        "columns": [
+          {
+            "name": "KreditorBilag",
+            "dataType": "string",
+            "sourceColumn": "KreditorBilag"
+          },
+          {
+            "name": "FinansBilag",
+            "dataType": "string",
+            "sourceColumn": "FinansBilag"
+          },
+          {
+            "name": "Kreditornr",
+            "dataType": "string",
+            "sourceColumn": "Kreditornr"
+          },
+          {
+            "name": "Post ID",
+            "dataType": "string",
+            "sourceColumn": "Post ID"
+          },
+          {
+            "name": "Forfaldsdato",
+            "dataType": "dateTime",
+            "sourceColumn": "Forfaldsdato"
+          },
+          {
+            "name": "Navn",
+            "dataType": "string",
+            "sourceColumn": "Navn"
+          },
+          {
+            "name": "Søgenavn",
+            "dataType": "string",
+            "sourceColumn": "Søgenavn"
+          },
+          {
+            "name": "Fakturakonto",
+            "dataType": "string",
+            "sourceColumn": "Fakturakonto"
+          },
+          {
+            "name": "Gruppe",
+            "dataType": "string",
+            "sourceColumn": "Gruppe"
+          },
+          {
+            "name": "Valuta",
+            "dataType": "string",
+            "sourceColumn": "Valuta"
+          },
+          {
+            "type": "calculated",
+            "name": "KreditorLabel",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE('10A_kreditorbro_'[Kreditornr],CONCATENATE(\" \",[Navn]))"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/Vitus;Likviditetsmodul\",",
+                "    dbo_10A_kreditorbro_ = Source{[Schema=\"dbo\",Item=\"10A_kreditorbro_\"]}[Data]",
+                "in",
+                "    dbo_10A_kreditorbro_"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "6386abfa-f6e3-4b1d-8f56-fa4ee83b6b80",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Artskonto",
+        "toTable": "02_Artskonto",
+        "toColumn": "Artskonto",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "516b1b4d-6372-48c6-b041-433e1c19b4ab",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Bilagsnr",
+        "toTable": "07_bilagsnr",
+        "toColumn": "Bilagsnr",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "acb79dda-c2d3-4aeb-a82f-9c2a2b250168",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Bogføringsdato",
+        "toTable": "01_Tid",
+        "toColumn": "Bogføringsdato",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "59ce25f4-00cf-4341-97de-f99d4b83cce9",
+        "fromTable": "02_Artskonto",
+        "fromColumn": "Artkontonavn_niv_1",
+        "toTable": "03_Artkonto_niv_1",
+        "toColumn": "Artkontonavn_niv_1",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "6871d34c-2730-46ae-b041-71351a8aceac",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Dranst",
+        "toTable": "16_Dransk",
+        "toColumn": "D1",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "da2fb87a-2721-4506-8d47-5a526272ef42",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Bogføringstype",
+        "toTable": "05_Bogøringstype",
+        "toColumn": "Bogføringstype",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "a84315ac-7045-4895-9642-ba4625e41478",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Reg kontonr",
+        "toTable": "Regkonto",
+        "toColumn": "Reg kontonr",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "25cf2c55-dfda-452d-9afb-a610f0642a66",
+        "fromTable": "Likviditetmodul",
+        "fromColumn": "Mask_Bogtype_Regkonto",
+        "toTable": "06_BogføringstypeMaskinr",
+        "toColumn": "Mask_Bogtype_Regkonto",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "70790dd4-7b34-46f0-87e3-6f6807fb72e9",
+        "fromTable": "10A_kreditorbro_",
+        "fromColumn": "KreditorBilag",
+        "toTable": "07_bilagsnr",
+        "toColumn": "Bilagsnr",
+        "crossFilteringBehavior": "bothDirections"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "Likviditet"
+      },
+      {
+        "name": "Likviditet_løn"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

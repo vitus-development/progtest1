@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inteiro_Financial_InsightDataSetvHovedkonto" targetNamespace="http://tempuri.org/Inteiro_Financial_InsightDataSetvHovedkonto.xsd" xmlns:mstns="http://tempuri.org/Inteiro_Financial_InsightDataSetvHovedkonto.xsd" xmlns="http://tempuri.org/Inteiro_Financial_InsightDataSetvHovedkonto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Finansial_Insight___Menu.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vHovedkontoTableAdapter" GeneratorDataComponentClassName="vHovedkontoTableAdapter" Name="vHovedkonto" UserDataComponentName="vHovedkontoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.vHovedkonto" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dim07Value FROM dbo.vHovedkonto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Dim07Value" DataSetColumn="Dim07Value" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inteiro_Financial_InsightDataSetvHovedkonto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Inteiro_Financial_InsightDataSetvHovedkonto" msprop:Generator_UserDSName="Inteiro_Financial_InsightDataSetvHovedkonto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vHovedkonto" msprop:Generator_TableClassName="vHovedkontoDataTable" msprop:Generator_TableVarName="tablevHovedkonto" msprop:Generator_TablePropName="vHovedkonto" msprop:Generator_RowDeletingName="vHovedkontoRowDeleting" msprop:Generator_RowChangingName="vHovedkontoRowChanging" msprop:Generator_RowEvHandlerName="vHovedkontoRowChangeEventHandler" msprop:Generator_RowDeletedName="vHovedkontoRowDeleted" msprop:Generator_UserTableName="vHovedkonto" msprop:Generator_RowChangedName="vHovedkontoRowChanged" msprop:Generator_RowEvArgName="vHovedkontoRowChangeEvent" msprop:Generator_RowClassName="vHovedkontoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dim07Value" msprop:Generator_ColumnVarNameInTable="columnDim07Value" msprop:Generator_ColumnPropNameInRow="Dim07Value" msprop:Generator_ColumnPropNameInTable="Dim07ValueColumn" msprop:Generator_UserColumnName="Dim07Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

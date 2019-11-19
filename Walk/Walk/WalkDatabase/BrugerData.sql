@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[BrugerData]
+(
+	[Pk_Bruger_ID] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY
+)

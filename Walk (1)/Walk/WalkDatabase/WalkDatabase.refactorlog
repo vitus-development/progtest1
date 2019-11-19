@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="46d15614-f3dd-421a-9b4a-fb877886bb86" ChangeDateTime="05/31/2019 19:25:08">
+    <Property Name="ElementName" Value="[dbo].[FK_WalkData_ToPerson]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[WalkData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Person_ID_ToPerson]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bc3adbe8-947b-4372-b6fe-5e4c433249d0" ChangeDateTime="05/31/2019 19:33:58">
+    <Property Name="ElementName" Value="[dbo].[WalkData].[Person_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WalkData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Fk_Person_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5394b52e-8870-43be-abd1-11ac155b245e" ChangeDateTime="05/31/2019 19:56:43">
+    <Property Name="ElementName" Value="[dbo].[BrugerData].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BrugerData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Pk_Bruger_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0b58668d-8636-43e0-be26-c31e9432e0da" ChangeDateTime="05/31/2019 19:57:19">
+    <Property Name="ElementName" Value="[dbo].[BrugerData].[Pk_Bruger_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BrugerData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Bruger_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6ca6da76-bdaa-4b00-b3ca-c5e61b02e796" ChangeDateTime="05/31/2019 19:57:57">
+    <Property Name="ElementName" Value="[dbo].[BrugerData].[Bruger_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BrugerData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Pk_Bruger_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="978d4ccc-eb4b-4180-b12d-65eadccf6024" ChangeDateTime="05/31/2019 20:09:37">
+    <Property Name="ElementName" Value="[dbo].[FK_WalkData_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[WalkData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_WalkData_]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5593b9f0-7786-4492-9129-395686106f57" ChangeDateTime="06/15/2019 14:49:38">
+    <Property Name="ElementName" Value="[dbo].[Brugere].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Brugere]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BrugerId" />
+  </Operation>
+</Operations>

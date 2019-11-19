@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Sted" targetNamespace="http://tempuri.org/Sted.xsd" xmlns:mstns="http://tempuri.org/Sted.xsd" xmlns="http://tempuri.org/Sted.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="LikviditetsmodulConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LikviditetsmodulConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Finansial_insight.My.MySettings.GlobalReference.Default.LikviditetsmodulConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Parameter_StedTableAdapter" GeneratorDataComponentClassName="Parameter_StedTableAdapter" Name="Parameter_Sted" UserDataComponentName="Parameter_StedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (MySettings)" DbObjectName="Likviditetsmodul.dbo.Parameter_Sted" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT S1 FROM dbo.Parameter_Sted</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="S1" DataSetColumn="S1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="LikviditetsmodulConnectionString (MySettings)" DbObjectName="Likviditetsmodul.dbo.Parameter_Sted" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        S1
+FROM            Parameter_Sted
+ORDER BY S1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Sted" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Sted" msprop:Generator_UserDSName="Sted">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Parameter_Sted" msprop:Generator_TableClassName="Parameter_StedDataTable" msprop:Generator_TableVarName="tableParameter_Sted" msprop:Generator_RowChangedName="Parameter_StedRowChanged" msprop:Generator_TablePropName="Parameter_Sted" msprop:Generator_RowDeletingName="Parameter_StedRowDeleting" msprop:Generator_RowChangingName="Parameter_StedRowChanging" msprop:Generator_RowEvHandlerName="Parameter_StedRowChangeEventHandler" msprop:Generator_RowDeletedName="Parameter_StedRowDeleted" msprop:Generator_RowClassName="Parameter_StedRow" msprop:Generator_UserTableName="Parameter_Sted" msprop:Generator_RowEvArgName="Parameter_StedRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="S1" msprop:Generator_ColumnVarNameInTable="columnS1" msprop:Generator_ColumnPropNameInRow="S1" msprop:Generator_ColumnPropNameInTable="S1Column" msprop:Generator_UserColumnName="S1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

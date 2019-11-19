@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inteiro_Financial_InsightDataSetDatoPeriode" targetNamespace="http://tempuri.org/Inteiro_Financial_InsightDataSetDatoPeriode.xsd" xmlns:mstns="http://tempuri.org/Inteiro_Financial_InsightDataSetDatoPeriode.xsd" xmlns="http://tempuri.org/Inteiro_Financial_InsightDataSetDatoPeriode.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Inteiro_Financial_InsightConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Inteiro_Financial_InsightConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inteiro_Finansial_Insigt_udv.My.MySettings.GlobalReference.Default.Inteiro_Financial_InsightConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Dato_PeriodeTableAdapter" GeneratorDataComponentClassName="Dato_PeriodeTableAdapter" Name="Dato_Periode" UserDataComponentName="Dato_PeriodeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Interval, År, Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12
+FROM     Dato_Periode
+ORDER BY År, Dato, Interval, Dag</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Interval" DataSetColumn="Interval" />
+              <Mapping SourceColumn="År" DataSetColumn="År" />
+              <Mapping SourceColumn="Dato" DataSetColumn="Dato" />
+              <Mapping SourceColumn="Dato01" DataSetColumn="Dato01" />
+              <Mapping SourceColumn="Dato02" DataSetColumn="Dato02" />
+              <Mapping SourceColumn="Dato03" DataSetColumn="Dato03" />
+              <Mapping SourceColumn="Dato04" DataSetColumn="Dato04" />
+              <Mapping SourceColumn="Dato05" DataSetColumn="Dato05" />
+              <Mapping SourceColumn="Dato06" DataSetColumn="Dato06" />
+              <Mapping SourceColumn="Dato07" DataSetColumn="Dato07" />
+              <Mapping SourceColumn="Dato08" DataSetColumn="Dato08" />
+              <Mapping SourceColumn="Dato09" DataSetColumn="Dato09" />
+              <Mapping SourceColumn="Dato10" DataSetColumn="Dato10" />
+              <Mapping SourceColumn="Dato11" DataSetColumn="Dato11" />
+              <Mapping SourceColumn="Dato12" DataSetColumn="Dato12" />
+              <Mapping SourceColumn="Dag" DataSetColumn="Dag1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12, Interval, År FROM Dato_Periode WHERE (Interval = @Interval) AND (År = @ÅR) AND (Dag = @DAG)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Interval" ColumnName="Interval" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Interval" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Interval" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ÅR" ColumnName="År" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ÅR" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="År" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DAG" ColumnName="Dag" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DAG" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Dag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12, Interval, År FROM Dato_Periode WHERE (Interval = @Inverval) AND (År = @År) AND (Dag = @Dag) AND (Dato = @Dato) ORDER BY År, Interval, Dag, Dato</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Inverval" ColumnName="Interval" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Inverval" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Interval" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="År" ColumnName="År" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@År" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="År" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Dag" ColumnName="Dag" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Dag" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Dag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Dato" ColumnName="Dato" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Dato" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="Dato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT År, Interval, Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12
+FROM         Dato_Periode
+WHERE     (År = @År) AND (Interval = @Interval) AND (Dag = @Dag) AND (Dato = @Dato)
+ORDER BY År, Interval, Dag, Dato</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="År" ColumnName="År" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@År" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="År" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Interval" ColumnName="Interval" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Interval" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Interval" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Dag" ColumnName="Dag" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Dag" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Dag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Dato" ColumnName="Dato" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Dato" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="Dato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT År, Interval, Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12
+FROM         Dato_Periode
+WHERE     (År = @År) AND (Interval = @Interval) AND (Dag = @Dag)
+ORDER BY År, Interval, Dag, Dato</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="År" ColumnName="År" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@År" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="År" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Interval" ColumnName="Interval" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Interval" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Interval" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Dag" ColumnName="Dag" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Dag" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Dag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy4">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Interval, År, Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12
+FROM     Dato_Periode
+ORDER BY År, Dato, Interval, Dag</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy5" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy5" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillBy5">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT   Interval, År, Dag, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12
+FROM         Dato_Periode
+WHERE     (Dato = @Dato)
+ORDER BY År, Dato, Interval, Dag</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Dato" ColumnName="Dato" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Dato" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="Dato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Inteiro_Financial_InsightConnectionString (MySettings)" DbObjectName="[Inteiro Financial Insight].dbo.Dato_Periode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy6" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy6" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillBy6">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT År, Dag, Interval, Dato, Dato01, Dato02, Dato03, Dato04, Dato05, Dato06, Dato07, Dato08, Dato09, Dato10, Dato11, Dato12
+FROM            Dato_Periode
+WHERE        (År = @År) AND (Dag = @Dag) AND (Interval = @Interval)
+ORDER BY År, Dag, Interval, Dato</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="År" ColumnName="År" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@År" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="År" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Dag" ColumnName="Dag" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="varchar(2)" DbType="AnsiString" Direction="Input" ParameterName="@Dag" Precision="0" ProviderType="VarChar" Scale="0" Size="2" SourceColumn="Dag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Interval" ColumnName="Interval" DataSourceName="[Inteiro Financial Insight].dbo.Dato_Periode" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Interval" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Interval" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inteiro_Financial_InsightDataSetDatoPeriode" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Inteiro_Financial_InsightDataSetDatoPeriode" msprop:Generator_UserDSName="Inteiro_Financial_InsightDataSetDatoPeriode">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dato_Periode" msprop:Generator_TableClassName="Dato_PeriodeDataTable" msprop:Generator_TableVarName="tableDato_Periode" msprop:Generator_RowChangedName="Dato_PeriodeRowChanged" msprop:Generator_TablePropName="Dato_Periode" msprop:Generator_RowDeletingName="Dato_PeriodeRowDeleting" msprop:Generator_RowChangingName="Dato_PeriodeRowChanging" msprop:Generator_RowEvHandlerName="Dato_PeriodeRowChangeEventHandler" msprop:Generator_RowDeletedName="Dato_PeriodeRowDeleted" msprop:Generator_RowClassName="Dato_PeriodeRow" msprop:Generator_UserTableName="Dato_Periode" msprop:Generator_RowEvArgName="Dato_PeriodeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Interval" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInterval" msprop:Generator_ColumnPropNameInRow="Interval" msprop:Generator_ColumnPropNameInTable="IntervalColumn" msprop:Generator_UserColumnName="Interval" type="xs:int" />
+              <xs:element name="År" msprop:Generator_ColumnVarNameInTable="columnÅr" msprop:Generator_ColumnPropNameInRow="År" msprop:Generator_ColumnPropNameInTable="ÅrColumn" msprop:Generator_UserColumnName="År" type="xs:int" minOccurs="0" />
+              <xs:element name="Dag" msprop:Generator_ColumnVarNameInTable="columnDag" msprop:Generator_ColumnPropNameInRow="Dag" msprop:Generator_ColumnPropNameInTable="DagColumn" msprop:Generator_UserColumnName="Dag" type="xs:int" minOccurs="0" />
+              <xs:element name="Dato" msprop:Generator_ColumnVarNameInTable="columnDato" msprop:Generator_ColumnPropNameInRow="Dato" msprop:Generator_ColumnPropNameInTable="DatoColumn" msprop:Generator_UserColumnName="Dato" type="xs:dateTime" />
+              <xs:element name="Dato01" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato01" msprop:Generator_ColumnPropNameInRow="Dato01" msprop:Generator_ColumnPropNameInTable="Dato01Column" msprop:Generator_UserColumnName="Dato01" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato02" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato02" msprop:Generator_ColumnPropNameInRow="Dato02" msprop:Generator_ColumnPropNameInTable="Dato02Column" msprop:Generator_UserColumnName="Dato02" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato03" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato03" msprop:Generator_ColumnPropNameInRow="Dato03" msprop:Generator_ColumnPropNameInTable="Dato03Column" msprop:Generator_UserColumnName="Dato03" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato04" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato04" msprop:Generator_ColumnPropNameInRow="Dato04" msprop:Generator_ColumnPropNameInTable="Dato04Column" msprop:Generator_UserColumnName="Dato04" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato05" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato05" msprop:Generator_ColumnPropNameInRow="Dato05" msprop:Generator_ColumnPropNameInTable="Dato05Column" msprop:Generator_UserColumnName="Dato05" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato06" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato06" msprop:Generator_ColumnPropNameInRow="Dato06" msprop:Generator_ColumnPropNameInTable="Dato06Column" msprop:Generator_UserColumnName="Dato06" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato07" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato07" msprop:Generator_ColumnPropNameInRow="Dato07" msprop:Generator_ColumnPropNameInTable="Dato07Column" msprop:Generator_UserColumnName="Dato07" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato08" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato08" msprop:Generator_ColumnPropNameInRow="Dato08" msprop:Generator_ColumnPropNameInTable="Dato08Column" msprop:Generator_UserColumnName="Dato08" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato09" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato09" msprop:Generator_ColumnPropNameInRow="Dato09" msprop:Generator_ColumnPropNameInTable="Dato09Column" msprop:Generator_UserColumnName="Dato09" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato10" msprop:Generator_ColumnPropNameInRow="Dato10" msprop:Generator_ColumnPropNameInTable="Dato10Column" msprop:Generator_UserColumnName="Dato10" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato11" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato11" msprop:Generator_ColumnPropNameInRow="Dato11" msprop:Generator_ColumnPropNameInTable="Dato11Column" msprop:Generator_UserColumnName="Dato11" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dato12" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDato12" msprop:Generator_ColumnPropNameInRow="Dato12" msprop:Generator_ColumnPropNameInTable="Dato12Column" msprop:Generator_UserColumnName="Dato12" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dag1" msdata:Caption="Dag" msprop:Generator_ColumnVarNameInTable="columnDag1" msprop:Generator_ColumnPropNameInRow="Dag1" msprop:Generator_ColumnPropNameInTable="Dag1Column" msprop:Generator_UserColumnName="Dag1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
